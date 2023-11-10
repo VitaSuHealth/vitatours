@@ -1,0 +1,172 @@
+@import './_styles/Form.scss';
+@import './_styles/FormSection.scss';
+@import './_styles/Footer.scss';
+@import './_styles/Nav.scss';
+@import './_styles/RessortSlider.scss';
+@import './_styles/Beschrijving.scss';
+@import './_styles/ContactHeader.scss';
+@import './_styles/ContactLinks.scss';
+@import './_styles/FormSection.scss';
+@import './_styles/Gallerij.scss';
+@import './_styles/HomeSlider.scss';
+@import './_styles/Locatie.scss';
+@import './_styles/OverOnsHeader.scss';
+@import './_styles/OverOnsIntro.scss';
+@import './_styles/Questions.scss';
+@import './_styles/RessortCards.scss';
+@import './_styles/RessortGridCard.scss';
+@import './_styles/RessortSlider.scss';
+@import './_styles/Samenwerking.scss';
+@import './_styles/Services.scss';
+@import './_styles/ServicesPreview.scss';
+@import './_styles/SocialLinks.scss';
+@import './_styles/Taggroup.scss';
+@import './_styles/TagSection.scss';
+@import './_styles/Socials.scss';
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+    // --main-font: 'Inter', sans-serif;
+    // --second-font: 'Poppins', sans-serif;
+    
+    --text-size-1: 48px;
+    --text-size-2: 40px;
+    --text-size-3: 32px;
+    --text-size-3-5: 28px;
+    --text-size-4: 24px;
+    --text-size-4-5: 22px;
+    --text-size-5: 18px;
+    --text-size-6: 16px;
+    --text-size-7: 14px;
+    --text-size-8: 12px;
+
+    color-scheme: light dark;
+
+    --main-color: #5CA126;
+    --secund-color: #004c4c;
+    --white: #ffffff;
+    --off-white: #fffffff5;
+    --card-bg: #f0f0f0;
+    --text-color: #000000;
+    --card-color: #ddd8d8;
+}
+html{
+    scroll-behavior:smooth;
+}
+body{
+    background: var(--off-white);
+    /* font-family: var(--main-font); */
+    overflow-x: hidden;
+}
+
+@media (prefers-color-scheme: dark) {
+
+    :root {
+        --main-color: #088f8f;
+        --secund-color: #004c4c;
+        --white: #ffffff;
+        --card-bg: #f0f0f0;
+        --text-color: #000000;
+        --gray: #ddd8d8;
+        --off-white: #efefef;
+        --card-color: #efefef;
+    }
+
+    body{
+        background-color: var(--text-color);
+        color: var(--off-white)
+    }
+
+        h4, h5, h3, h2{
+            color: var(--off-white);
+        }
+    
+        .heading-2, .heading-3{
+            color: var(--main-color);
+        }
+
+    .nav{
+        .nav-box{
+            background-color: var(--text-color);
+        }
+
+        a{
+            color: var(--off-white) !important;
+        }
+    }
+
+}
+
+/* Utilitie styling  */
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+}
+
+
+h1{
+    font-size: var(--text-size-2);
+}
+h2{
+    font-size: var(--text-size-3);
+}
+
+h3{
+    font-size: var(--text-size-4);
+    
+}
+h4{
+    font-size: var(--text-size-4);
+}
+
+p{
+    font-size: var(--text-size-5);
+}
+
+//Buttons
+.main-btn{
+    color: var(--off-white);
+    background-color: var(--secund-color);
+    padding: 5px 2rem;
+    font-size: var(--text-size-5);
+    border-radius: 3px;
+}
+.btn-3{
+    color: var(--main-color);
+    font-size: var(--text-size-4-5);
+    text-decoration: underline;
+}
+
+.btn-fixed{
+    position: fixed;
+    right: 2rem;
+    top: 6rem;
+    z-index: 150;
+}
+
+.container {
+    width: 90%;
+    max-width: 1500px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+
+/* Background Gradients */
+
+.bg-box{
+    width: 100%;
+    height: 700px;
+    background: linear-gradient(#f2f2f2, #79B28D);
+    position: absolute;
+    left: 0;
+    z-index: -5;
+}

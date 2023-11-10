@@ -1,0 +1,15 @@
+.socials{
+    margin-top: 3rem;
+    width: 350px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    color: var(--off-white);
+
+    .social-i{
+        font-size: 1.8rem;
+    }
+}
+.socials > *{
+    margin-right: 10px;
+}

@@ -1,0 +1,40 @@
+.contact-links{
+    margin: 3rem 0;
+    width: 100%;
+    .wrapper{
+        width: 80%;
+        margin: 0 auto;
+        .columns{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+
+            .phone, .location{
+                flex: 1;
+                text-align: center;
+            }
+            .icon{
+                padding-bottom: 2rem;
+            }
+            
+        }
+
+        .title{
+            text-decoration: underline;
+            padding-bottom: 1rem;
+            font-weight: 600;
+        }
+        .content{
+
+        }
+
+        .contact-link{
+            display: block;
+            margin-top: 3rem;
+            width: 100%;
+            text-align: center;
+        }
+    }
+}

@@ -1,94 +1,65 @@
-import Image from 'next/image'
-import styles from './page.module.css'
+import {client} from "@/app/_lib/client"
 
-export default function Home() {
+import ContactLinks from "./_components/ContactLinks";
+import Questions from "./_components/Questions";
+
+async function getContactGegevens () {
+  const res = await client.getEntries({content_type:'contactGegevens'});
+   return res;
+}
+
+// export async function getStaticProps() {
+  
+  // const client = createClient({
+  //   space:  process.env.CONTENTFUL_SPACE_ID!,
+  //   accessToken: process.env.CONTENTFUL_ACCES_KEY!,
+  // })
+
+// const aboutIntro = await client.getEntries({content_type:'siteTextAndImages', 'fields.slug': 'about-intro'});
+// const gerechten = await client.getEntries({content_type:'gerechten'});
+// const socialImage = await client.getEntries({content_type:'socialImages', 'fields.slug': 'home'});
+// const algemeenImage = await client.getEntries({content_type:'socialImages', 'fields.slug': 'algemeen'});
+// const menuImage = await client.getEntries({content_type:'menuImage'});
+
+// const district = await client.getEntries({content_type:'district'});
+// const diensten = await client.getEntries({content_type:'diensten'});
+// const ressort = await client.getEntries({content_type:'ressort'});
+// const samenWerking = await client.getEntries({content_type:'siteContent', 'fields.slug': 'samenwerking'});
+// const headingHome1 = await client.getEntries({content_type:'siteContent', 'fields.slug': 'heading-home-1'});
+// const headingHome2 = await client.getEntries({content_type:'siteContent', 'fields.slug': 'heading-home-2'});
+// const overOnsBanner = await client.getEntries({content_type:'siteContent', 'fields.slug': 'overonsbanner'});
+// const overOnsColumn = await client.getEntries({content_type:'siteContent', 'fields.slug': 'overonscolumn'});
+
+  // const shareImages = socialImage.items[0] !== undefined ? socialImage : algemeenImage;
+
+//   return {
+//     props: {
+//       contactGegevens: contactGegevens.items,
+//       district: district.items,
+//       ressort: ressort.items,
+//       samenWerking: samenWerking.items,
+//       headingHome1: headingHome1.items,
+//       headingHome2: headingHome2.items,
+//       overOnsBanner: overOnsBanner.items,
+//       overOnsColumn: overOnsColumn.items,
+      
+//       revalidate: 100
+//     }
+//   }
+// }
+
+
+
+export default async function Home() {
+  const contactGegevens = await getContactGegevens();
+  console.log( await contactGegevens.items[0].fields);
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore the Next.js 13 playground.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
+    <main className=''>
+      <div className="container">
+        {await contactGegevens.items[0].fields.naam}
+        Welcome
+        <Questions/>
+        <ContactLinks/>
       </div>
     </main>
   )

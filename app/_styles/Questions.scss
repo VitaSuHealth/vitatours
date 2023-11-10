@@ -1,0 +1,30 @@
+#questions{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+    min-height: 25vh;
+}
+
+.question-group{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 5px;
+}
+
+.question-group p {
+    font-size: var(--text-size-4);
+    font-weight: 500;
+}
+
+.question-group .q4{
+    margin-top: 1.5rem;
+    font-size: var(--text-size-3-5);
+    font-weight: 600;
+}
