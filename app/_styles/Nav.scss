@@ -80,6 +80,10 @@ ul li a {
     align-items: center;
     flex: 1;
 
+    a{
+        color: var(--text-color)
+    }
+
     .tel-nummer, .adres{
         display: flex;
         justify-content: space-between;

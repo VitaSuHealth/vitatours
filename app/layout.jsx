@@ -1,14 +1,11 @@
-'use client'
 import './globals.scss'
+import ContentProvider from './_contexts/ContentContext'
 
-// import AuthProvider from './_contexts/AuthContext';
-import Nav from './_components/Nav'
+import Nav from '@/app/_components/Nav'
 import Footer from './_components/Footer'
 import { ToastContainer} from 'react-toastify';
 
-
 import { Montserrat } from 'next/font/google'
-// import AppProvider from './_contexts/AppContext';
 
 const montserrat = Montserrat({
   weight: ['400', '700'],
@@ -16,13 +13,7 @@ const montserrat = Montserrat({
 })
 
   
-  export default function RootLayout({
-    children,
-}: {
-  children: React.ReactNode
-}) {
-
-
+  export default function RootLayout({children}) {
 
   return (
     <html lang="en">
@@ -31,10 +22,12 @@ const montserrat = Montserrat({
       <title>Collaboratio</title>
       </head>
       <body className={`${montserrat.className}`}>
-            <Nav/>
-            {children}
-            <ToastContainer />
-            <Footer/>
+            <ContentProvider>
+              <Nav />
+              {children}
+              <ToastContainer />
+              <Footer/>
+            </ContentProvider>
       </body>
     </html>
   )

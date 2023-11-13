@@ -4,40 +4,15 @@ import Link from 'next/link';
 import Image from 'next/image';
 import Socials from './Socials';
 import {client} from "@/app/_lib/client"
-import { useEffect, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
+import { Irish_Grover } from 'next/font/google';
+import contactGegeven from '../_types/ContactGegeven';
+import { ContentContext } from '../_contexts/ContentContext';
 
-// type contactGegevens = {
-//     naam: string,
-//     text: string,
-//     slug: string
-
-// }
 
 
 export default function Footer() {
-    
-    const getContactGegevens  = async () =>  {
-        const res = await client.getEntries({content_type:'contactGegevens'});
-        const items = res.items;
-        const adres  = items.filter(item => item.fields.slug == 'adres');
-        console.log(adres.fields);
-        setAdress(adres.fields.text);
-        return res;
-    }
-    
-    useEffect(() => {
-        getContactGegevens();
-
-    }, [])
-
-    const [adress, setAdress] = useState();
-    const [openingstijden, setOpeningstijden] = useState('');
-    // console.log(adress.fields.text)
-
-// const contactGegevens = await getContactGegevens();
-// const items : any[] = await contactGegevens.items;
-// const adress = await items.filter(item => item.slug == 'openingstijden');
-// console.log( items);
+    const {email, instagram,tikTok, facebook, openingstijden} = useContext(ContentContext);
 
   return (
     <footer className='footer'>
@@ -46,9 +21,9 @@ export default function Footer() {
                 <div className="column-left">
                     <div className="openingstijden">
                         <h3>Openingstijden:</h3>
-                        <p>Maandag - Vrijdag: 08:00u  - 15:00u</p>
-                        {adress}
-                        <Socials/>
+                        <p>{openingstijden && openingstijden.text}</p>
+                        {/* {adress} */}
+                        <Socials email ={email} instagram={instagram} tikTok={tikTok} facebook={facebook}/>
                     </div>
                 </div>
                 <div className="column-right">

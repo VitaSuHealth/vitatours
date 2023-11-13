@@ -2,14 +2,14 @@ import {client} from "@/app/_lib/client"
 
 import ContactLinks from "./_components/ContactLinks";
 import Questions from "./_components/Questions";
+import Samenwerking from "./_components/Samenwerking";
+import ServicesPreview from "./_components/ServicesPreview";
 
 async function getContactGegevens () {
   const res = await client.getEntries({content_type:'contactGegevens'});
    return res;
 }
 
-// export async function getStaticProps() {
-  
   // const client = createClient({
   //   space:  process.env.CONTENTFUL_SPACE_ID!,
   //   accessToken: process.env.CONTENTFUL_ACCES_KEY!,
@@ -51,13 +51,12 @@ async function getContactGegevens () {
 
 
 export default async function Home() {
-  const contactGegevens = await getContactGegevens();
-  console.log( await contactGegevens.items[0].fields);
+  // const contactGegevens = await getContactGegevens();
   return (
     <main className=''>
       <div className="container">
-        {await contactGegevens.items[0].fields.naam}
-        Welcome
+        <Samenwerking/>
+        <ServicesPreview/>
         <Questions/>
         <ContactLinks/>
       </div>

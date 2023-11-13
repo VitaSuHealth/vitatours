@@ -1,17 +1,17 @@
 'use client'
+
 import React, {useContext, useState} from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { FaBars, FaTimesCircle, FaPhone} from 'react-icons/fa'
 import {ImLocation2} from 'react-icons/im'
+import contactGegeven from '../_types/ContactGegeven'
 
-
-// import { AuthContext } from '../_contexts/AuthContext'
-
+import { ContentContext } from '../_contexts/ContentContext'
 
 export default function Nav() {
   const [showMenu, setShowMenu] = useState(false);
-//   const {logoutHandler, loggedIn} = useContext(AuthContext);
+  const {adres, telNummer} = useContext(ContentContext);
   
   return (
     <div className="container">
@@ -40,12 +40,16 @@ export default function Nav() {
             </ul>
             <div className="nav-contact">
                 <div className="tel-nummer">
-                  <FaPhone className='nav-contact-i'/>
-                  <p>+597 8933666</p>
+                    <FaPhone className='nav-contact-i'/>
+                    <a href={`tel:${telNummer && telNummer.text}`}>
+                      <p>{telNummer && telNummer.text}</p>
+                    </a>
                 </div>
                 <div className="adres">
                   <ImLocation2 className='nav-contact-i'/>
-                  <p>Madeliefjestraat # 15</p>
+                  <a href="https://www.google.com/maps/place/Madeliefjes+St,+Paramaribo,+Suriname/@5.8187064,-55.181184,17z/data=!4m6!3m5!1s0x8d09cb27550a2e41:0xc50b869ebf7562a!8m2!3d5.8194322!4d-55.1815112!16s%2Fg%2F1v_ndk0l?entry=ttu" target='_blank'>
+                    <p>{adres && adres.text}</p>
+                  </a>
                 </div>
             </div>
           </div>
@@ -57,7 +61,7 @@ export default function Nav() {
         onClick={() => setShowMenu(!showMenu)}/>
 
         : <FaBars size="2.5rem" className='menuI' 
-                      onClick={() => setShowMenu(!showMenu)}/>
+            onClick={() => setShowMenu(!showMenu)}/>
         }
         
         {/* BG with opacity on navbar */}
