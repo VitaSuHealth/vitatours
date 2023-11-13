@@ -7,7 +7,7 @@ export default function page() {
   return (
     <div>
         <div className="container">
-            
+            <h1>Hello</h1>
           <Questions/>
           <ContactLinks/>
           <FormSection/>
