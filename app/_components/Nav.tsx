@@ -5,8 +5,6 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { FaBars, FaTimesCircle, FaPhone} from 'react-icons/fa'
 import {ImLocation2} from 'react-icons/im'
-import contactGegeven from '../_types/ContactGegeven'
-
 import { ContentContext } from '../_contexts/ContentContext'
 
 export default function Nav() {
@@ -27,7 +25,7 @@ export default function Nav() {
                 blurDataURL={'/logo.png'}
                 priority={true}
               /> */}
-              <h1 className='logo-text'>VitaTours</h1>
+              <h1 className='branding'>VitaTours</h1>
           </Link>
         </div>
         <div className= {`nav-right list ${!showMenu ? 'hide': ""}`}

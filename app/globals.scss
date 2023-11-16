@@ -1,5 +1,5 @@
-@import './_styles/Form.scss';
 @import './_styles/FormSection.scss';
+@import './_styles/Form.scss';
 @import './_styles/Footer.scss';
 @import './_styles/Nav.scss';
 @import './_styles/RessortSlider.scss';
@@ -24,6 +24,9 @@
 @import './_styles/TagSection.scss';
 @import './_styles/Socials.scss';
 @import './_styles/ServiceCard.scss';
+@import './_styles/RessortDetails.scss';
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Irish+Grover&family=Lobster&family=Poppins:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Roboto+Flex:opsz,wght@8..144,300;8..144,400;8..144,500;8..144,600;8..144,700;8..144,800&display=swap');
 
 *{
   margin: 0;
@@ -32,8 +35,10 @@
 }
 
 :root {
-    // --main-font: 'Inter', sans-serif;
-    // --second-font: 'Poppins', sans-serif;
+    --main-font: 'Inter', sans-serif;
+    --second-font: 'Roboto Flex', sans-serif;
+    --header-font: 'Irish Grover', sans-serif;
+    --special-font: 'Lobster', sans-serif;
     
     --text-size-1: 48px;
     --text-size-2: 40px;
@@ -61,14 +66,14 @@ html{
 }
 body{
     background: var(--off-white);
-    /* font-family: var(--main-font); */
+    font-family: var(--main-font);
     overflow-x: hidden;
 }
 
 @media (prefers-color-scheme: dark) {
 
     :root {
-        --main-color: #088f8f;
+        --main-color: #5CA126;
         --secund-color: #004c4c;
         --white: #ffffff;
         --card-bg: #f0f0f0;
@@ -136,9 +141,9 @@ p{
 //Buttons
 .main-btn{
     color: var(--off-white);
-    background-color: var(--secund-color);
+    background-color: var(--main-color);
     padding: 5px 2rem;
-    font-size: var(--text-size-5);
+    font-size: var(--text-size-4-5);
     border-radius: 3px;
 }
 

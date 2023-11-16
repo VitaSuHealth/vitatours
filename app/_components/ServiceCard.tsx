@@ -1,13 +1,12 @@
 import Image from 'next/image'
 import contentfulReturn from '../_types/ContentfulReturn'
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
-import { Document } from "@contentful/rich-text-types";
 
 
-export default function ServiceCard({service}: {service: contentfulReturn}) {
+export default function ServiceCard({service, row}: {service: contentfulReturn, row: boolean}) {
     const {afbeelding, beschrijving, naam} = service.fields;
   return (
-    <div className='service-card'>
+    <div className={`service-card ${!row ? 'min-w': ''} `}>
         <div className="afbeelding">
             <Image src={`https:` + afbeelding.fields.file.url} 
                     width="1000"
@@ -16,7 +15,7 @@ export default function ServiceCard({service}: {service: contentfulReturn}) {
         </div>
         <div className="text">
             <p className="text-header">{naam}</p>
-            <div className="text-content">
+            <div className={`text-content ${!row ? 'text-clamp': ''} `}>
                 {documentToReactComponents(beschrijving)}
             </div>
         </div>

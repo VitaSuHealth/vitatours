@@ -6,13 +6,12 @@ import Socials from './Socials';
 import {client} from "@/app/_lib/client"
 import { useContext, useEffect, useState } from 'react';
 import { Irish_Grover } from 'next/font/google';
-import contactGegeven from '../_types/ContactGegeven';
 import { ContentContext } from '../_contexts/ContentContext';
 
 
 
 export default function Footer() {
-    const {email, instagram,tikTok, facebook, openingstijden} = useContext(ContentContext);
+    const {openingstijden} = useContext(ContentContext);
 
   return (
     <footer className='footer'>
@@ -23,7 +22,7 @@ export default function Footer() {
                         <h3>Openingstijden:</h3>
                         <p>{openingstijden && openingstijden.text}</p>
                         {/* {adress} */}
-                        <Socials email ={email} instagram={instagram} tikTok={tikTok} facebook={facebook}/>
+                        <Socials />
                     </div>
                 </div>
                 <div className="column-right">

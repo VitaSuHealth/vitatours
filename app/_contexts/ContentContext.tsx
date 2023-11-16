@@ -2,18 +2,31 @@
 
 import { createContext, useState, useEffect } from "react";
 import { client } from "../_lib/client";
+import ContactGegeven from "../_types/ContactGegeven";
+import ContentfulContactObject from "../_types/ContentfulContact";
 
-export const ContentContext = createContext({});
+export interface ContentContextInterface {
+  adres: ContactGegeven, 
+  email: ContactGegeven, 
+  instagram: ContactGegeven, 
+  tikTok: ContactGegeven, 
+  facebook: ContactGegeven, 
+  openingstijden: ContactGegeven, 
+  telNummer: ContactGegeven, 
 
-export default function ContentProvider({ children }) {
+}
+
+export const ContentContext = createContext<Partial<ContentContextInterface>>({});
+
+export default function ContentProvider({ children }: {children: React.ReactNode}) {
   const [contactGegevens, setContactgegevens] = useState([]);
-  const [adres, setAdres] = useState();
-  const [telNummer, setTelNummer] = useState();
-  const [openingstijden, setOpeningstijden] = useState();
-  const [tikTok, setTikTok] = useState();
-  const [instagram, setInstagram] = useState();
-  const [facebook, setFacebook] = useState();
-  const [email, setEmail] = useState();
+  const [adres, setAdres] = useState<ContactGegeven>();
+  const [telNummer, setTelNummer] = useState<ContactGegeven>();
+  const [openingstijden, setOpeningstijden] = useState<ContactGegeven>();
+  const [tikTok, setTikTok] = useState<ContactGegeven>();
+  const [instagram, setInstagram] = useState<ContactGegeven>();
+  const [facebook, setFacebook] = useState<ContactGegeven>();
+  const [email, setEmail] = useState<ContactGegeven>();
 
   const getContactGegevens = async () => {
     const result = await client.getEntries({ content_type: "contactGegevens" });
@@ -24,7 +37,7 @@ export default function ContentProvider({ children }) {
   };
 
   const filterContactgegevens = () => {
-    contactGegevens.forEach((gegeven) => {
+    contactGegevens.forEach((gegeven : ContentfulContactObject) => {
       switch (gegeven.fields.slug) {
         case "adres":
           setAdres(gegeven.fields);
@@ -58,7 +71,7 @@ export default function ContentProvider({ children }) {
   }, []);
 
   useEffect(() => {
-    filterContactgegevens(contactGegevens);
+    filterContactgegevens();
   }, [contactGegevens]);
 
   return (

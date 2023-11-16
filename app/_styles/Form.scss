@@ -31,9 +31,10 @@
                     input{
                         width: 280px !important;
                     }
-                    .phone{
-                        justify-self: flex-end !important;
-                    }
+                }
+                .phone{
+                    justify-self: flex-end !important;
+                    
                 }
 
             }
@@ -58,7 +59,7 @@
     textarea{
         width: 600px;
         // min-width: 300px;
-        outline: none;
+        outline: 1px solid rgba($color: #a4a4a4, $alpha: 0.3);
         border: none;
         border-radius: 3px;
         padding: 3px 10px;
@@ -104,11 +105,11 @@
         
         .btn-sumbit{
             margin-top: 10px;
-            height: 60px;
+            height: 45px;
             padding: 5px;
-            background: var(--secund-color);
+            background: var(--main-color);
             color: var(--off-white) !important;
-            font-size: var(--text-size-4) !important;
+            font-size: var(--text-size-4-5) !important;
         }
     }
 

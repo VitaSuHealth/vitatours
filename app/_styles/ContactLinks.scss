@@ -15,6 +15,11 @@
                 flex: 1;
                 text-align: center;
             }
+            .phone {
+                .icon{
+                    transform: rotate(90deg);
+                }
+            }
             .icon{
                 padding-bottom: 2rem;
             }
@@ -25,9 +30,6 @@
             text-decoration: underline;
             padding-bottom: 1rem;
             font-weight: 600;
-        }
-        .content{
-
         }
 
         .contact-link{

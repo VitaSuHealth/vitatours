@@ -10,12 +10,13 @@
         color: var(--off-white);
     }
 
+
     .social-i{
         font-size: 1.8rem;
         transition: color 0.2s ease-in-out;
     }
     .social-i:hover{
-        color: var(--secund-color);
+        color: var(--main-color);
     }
 }
 .socials > *{

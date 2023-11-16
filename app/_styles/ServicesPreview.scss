@@ -2,18 +2,6 @@
     width: 100%;
     margin: 2rem 0;
 
-    .columns{
-        width: 90%;
-        margin: 0 auto;
-        padding: 2rem 0;
-        /* display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(330px, 1fr)); */
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: flex-start;
-        align-items: flex-start;
-        gap: 2rem;
-    }
 
     .cta{
         width: 100%;
@@ -23,10 +11,27 @@
     
 }
 
-.service-card{
+.columns{
+    width: 100%;
+    margin: 0 auto;
+    padding: 2rem 0;
+    /* display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(330px, 1fr)); */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 2rem;
+}
+
+.min-w{
     width: 350px;
+    flex-direction: column;
+}
+.service-card{
+    display: flex;
+    gap: 2rem;
     .afbeelding{
-        margin-bottom: 1rem;
         img{
             width: 350px;
             height: 250px;
@@ -37,6 +42,13 @@
         .text-header{
             font-size: var(--text-size-3);
             margin-bottom: 1rem;
+        }
+        .text-clamp{
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            word-wrap: break-word;
+            overflow: hidden;
         }
 
     }

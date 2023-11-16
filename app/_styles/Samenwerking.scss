@@ -22,6 +22,7 @@
             img{
                 width: 75%;
                 height: 100%;
+                object-fit: cover;
                 
             }
         }
@@ -38,11 +39,17 @@
                 font-size: var(--text-size-3);
                 text-decoration: underline;
             }
+
+            .amount{
+                padding: 5px 0;
+                font-family: var(--special-font);
+            }
             .text-p{
                 font-size: var(--text-size-4);
             }
             .suriname{
-                font-size: var(--text-size-1);
+                font-size: 5rem;
+                font-family: var(--special-font);
                 text-shadow: 5px 5px 10px rgba($color: #000000, $alpha: 0.5);
                 font-weight: 600;
             }
@@ -57,4 +64,5 @@
     width: 100%;
     text-align: center;
     padding: 1rem 0;
+    font-family: var(--header-font);
 }

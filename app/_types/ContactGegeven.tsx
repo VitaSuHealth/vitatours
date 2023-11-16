@@ -1,7 +1,7 @@
-type contactGegeven = {
+type ContactGegeven = {
     naam: string,
     text: string,
     slug: string
 }
 
-export default contactGegeven;
+export default ContactGegeven;

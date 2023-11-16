@@ -1,4 +1,4 @@
-type contentfulImage = {
+type ContentfulImage = {
     metadata: object,
     sys: object,
     fields: {
@@ -12,4 +12,4 @@ type contentfulImage = {
     }
 }
 
-export default contentfulImage;
+export default ContentfulImage;
