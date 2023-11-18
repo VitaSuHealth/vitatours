@@ -5,12 +5,9 @@ import Nav from '@/app/_components/Nav'
 import Footer from './_components/Footer'
 import { ToastContainer} from 'react-toastify';
 
-import { Montserrat, Irish_Grover } from 'next/font/google'
+import { Irish_Grover } from 'next/font/google'
 
-const montserrat = Montserrat({
-  weight: ['400', '700'],
-  subsets: ['latin']
-})
+
 
 // const irishGrover = Irish_Grover({
 //     weight: "400",
@@ -23,10 +20,9 @@ const montserrat = Montserrat({
   export default function RootLayout({children}: {children: React.ReactNode}) {
 
   return (
-    <html lang="en">
+    <html lang="nl">
       <head>
-      <link rel="shortcut icon" href="/images/logo.ico" type="image/x-icon" />
-      <title>Collaboratio</title>
+      <title>Vita Tours</title>
       </head>
       <body>
             <ContentProvider>

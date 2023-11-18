@@ -23,9 +23,9 @@ export default async function ServicesPreview() {
   return (
     <div id="services-preview">
          <div className="heading">
-            <h2 className="section-heading">
+            <div className="section-heading">
             {documentToReactComponents(headerTekst)}
-            </h2>
+            </div>
         </div>
         <div className="columns">
             {items?.map( item  => (

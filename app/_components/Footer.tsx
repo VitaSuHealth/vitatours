@@ -3,9 +3,7 @@ import { usePathname } from 'next/navigation'
 import Link from 'next/link';
 import Image from 'next/image';
 import Socials from './Socials';
-import {client} from "@/app/_lib/client"
-import { useContext, useEffect, useState } from 'react';
-import { Irish_Grover } from 'next/font/google';
+import { useContext} from 'react';
 import { ContentContext } from '../_contexts/ContentContext';
 
 
@@ -38,7 +36,7 @@ export default function Footer() {
             </div>
         </div>
         {/* Background */}
-        <Image className='footer-img' src='/footer-img.jpg'
+        <Image className='footer-img' src='/images/footer-img.jpg'
             width="1000"
             height='600'
             alt='logo' 

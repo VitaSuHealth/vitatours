@@ -24,9 +24,9 @@ export default async function Samenwerking() {
     return (
     <div id='samenwerking'>
         <div className="heading">
-            <h2 className="section-heading">
+            <div className="section-heading">
             {documentToReactComponents(headerTekst)}
-            </h2>
+            </div>
         </div>
         <div className="columns">
             <div className="afbeelding">

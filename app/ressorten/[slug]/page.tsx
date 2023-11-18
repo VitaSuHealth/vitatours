@@ -6,12 +6,11 @@ import {ImLocation2} from 'react-icons/im'
 import { client } from '@/app/_lib/client';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 import ContentfulRessortObject from '@/app/_types/ContentfulRessortObject';
-import ContentfulImage from '@/app/_types/ContentfulImage';
-import GalleryImage from '@/app/_components/GalleryImage';
 import Questions from '@/app/_components/Questions';
 import RessortSlider from '@/app/_components/RessortSlider';
 import IFrame from '@/app/_components/IFrame';
 import SwiperComponent from '@/app/_components/SwiperComponent';
+import GalleryImageContainer from '@/app/_components/GalleryImageContainer';
 
 const getRessort = async (slug: string) => {
     const res = await client.getEntries({content_type:'ressort', 'fields.slug': slug});
@@ -26,7 +25,6 @@ export default async function page({params}: { params: { slug: string } }) {
 
 
   const {naam, district, gallerij, beschrijving, locatie} = ressort.fields;
-    const coverImage : ContentfulImage = gallerij[0];
 
   return (
     <div id='ressort-details'>
@@ -71,12 +69,7 @@ export default async function page({params}: { params: { slug: string } }) {
                 <ImLocation2 className='details-i'/>
                 <h3 className="name">Gallerij:</h3>
               </div>
-              <div className="gallery-image-container content">
-                {gallerij.map( afbeelding  => (
-                    <GalleryImage image={afbeelding} key={afbeelding.fields.file.fileName}/>
-                ))
-                }
-              </div>
+                <GalleryImageContainer gallerij={gallerij}/>
             </div>
           <Questions/>
           <ContactLinks/>
