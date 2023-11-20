@@ -3,8 +3,8 @@ import Questions from '../_components/Questions'
 import ContactLinks from '../_components/ContactLinks'
 import RessortGridCard from '../_components/RessortGridCard'
 import { client } from '@/app/_lib/client';
-import ContentfulRessortObject from '../_types/ContentfulRessortObject';
 import GalleryImage from './GalleryImage';
+import ContentfulRessortObject from '../_types/ContentfulRessortObject';
 
 
 const getRessorts = async () => {
