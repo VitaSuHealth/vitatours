@@ -12,7 +12,7 @@ export default function page() {
         <div className="container">
           <OverOnsIntro/>
           <Services/>
-          <Samenwerking/>
+          <Samenwerking showHeader={false}/>
           <Questions/>
           <ContactLinks/>
         </div>

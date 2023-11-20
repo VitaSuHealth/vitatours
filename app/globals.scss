@@ -26,6 +26,7 @@
 @import './_styles/ServiceCard.scss';
 @import './_styles/RessortDetails.scss';
 @import './_styles/ImageModal.scss';
+@import './_styles/MediaQueries.scss';
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Irish+Grover&family=Lobster&family=Poppins:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Roboto+Flex:opsz,wght@8..144,300;8..144,400;8..144,500;8..144,600;8..144,700;8..144,800&display=swap');
 
@@ -61,12 +62,13 @@
     --card-bg: #f0f0f0;
     --text-color: #000000;
     --card-color: #ddd8d8;
+    --box-shadow-color: rgba(0,0,0,0.6);
 }
 html{
     scroll-behavior:smooth;
 }
 body{
-    background: var(--off-white);
+    background: var(--card-bg);
     font-family: var(--main-font);
     overflow-x: hidden;
 }
@@ -82,6 +84,7 @@ body{
         --gray: #ddd8d8;
         --off-white: #efefef;
         --card-color: #efefef;
+        --box-shadow-color: rgba(81, 131, 50, 0.5);
     }
 
     body{
@@ -121,7 +124,7 @@ ul{
 
 
 h1{
-    font-size: var(--text-size-2);
+    font-size: var(--text-size-1);
 }
 h2{
     font-size: var(--text-size-3);
@@ -151,8 +154,8 @@ p{
 .secund-btn{
     color: var(--off-white);
     background-color: var(--main-color);
-    padding: 10px 2.5rem;
-    font-size: var(--text-size-4);
+    padding: 8px 1.5rem;
+    font-size: var(--text-size-4-5);
     border-radius: 3px;
 
 }

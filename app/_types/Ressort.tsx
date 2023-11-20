@@ -8,7 +8,7 @@ type contentfulRessort = {
     slug: string,
     gallerij: ContentfulImage[],
     beschrijving: Document,
-    locatie: object,
+    locatie: string,
     district: ContentfulDistrictObject
 }
 

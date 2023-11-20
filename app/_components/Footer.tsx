@@ -41,7 +41,7 @@ export default function Footer() {
             height='600'
             alt='logo' 
             placeholder="blur"
-            blurDataURL={'/logo.png'}
+            blurDataURL={'/images/logo.ico'}
             priority={true}
         />
         <div className="footer-backdrop"></div>

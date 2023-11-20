@@ -15,7 +15,7 @@ async function getHeading () {
      return heading;
 }
 
-export default async function Samenwerking() {
+export default async function Samenwerking({showHeader}: {showHeader: boolean}) {
     const fields = await getContent();
     const heading = await getHeading();
     const {afbeelding, tekst} = fields;
@@ -23,17 +23,22 @@ export default async function Samenwerking() {
 
     return (
     <div id='samenwerking'>
-        <div className="heading">
-            <div className="section-heading">
-            {documentToReactComponents(headerTekst)}
+        {showHeader && 
+            <div className="heading">
+                <div className="section-heading">
+                {documentToReactComponents(headerTekst)}
+                </div>
             </div>
-        </div>
+        }
         <div className="columns">
             <div className="afbeelding">
                 <Image src={`https:` + afbeelding.fields.file.url} 
                         width="1000"
                         height="1000"
+                        placeholder="blur"
+                        blurDataURL={'/images/logo.ico'}
                         alt={`${fields.naam} image`} priority={true}/>
+                        
             </div>
             <div className="text">
                 <p className="text-header">Samenwerking met meer dan:</p>

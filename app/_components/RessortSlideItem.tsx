@@ -10,10 +10,10 @@ export default function RessortSlideItem({gallerijImg, title, link, district}:{g
     <div className="slide-item">
          <Image className='banner-img' src={`https://${gallerijImg.fields.file.url}`}
             width="1000"
-            height='600'
+            height="600"
             alt='logo' 
             placeholder="blur"
-            blurDataURL={'/logo.png'}
+            blurDataURL={'/images/logo.ico'}
             priority={true}
         />
         {title &&

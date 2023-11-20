@@ -17,7 +17,7 @@ export default function RessortCard({ressort}: {ressort: ContentfulRessortObject
             height='1000'
             alt={naam} 
             placeholder="blur"
-            blurDataURL={'/logo.png'}
+            blurDataURL={'/images/logo.ico'}
             priority={true}
             />
         </div>

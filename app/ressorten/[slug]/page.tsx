@@ -25,7 +25,6 @@ export default async function page({params}: { params: { slug: string } }) {
 
 
   const {naam, district, gallerij, beschrijving, locatie} = ressort.fields;
-
   return (
     <div id='ressort-details'>
         <div className="container">
@@ -60,7 +59,7 @@ export default async function page({params}: { params: { slug: string } }) {
                 <h3 className="name">Locatie:</h3>
               </div>
               <div className="content">
-                <IFrame src='https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3969.2614282336895!2d-55.181184!3d5.8187064!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8d09cb27550a2e41%3A0xc50b869ebf7562a!2sMadeliefjes%20Straat%2C%20Paramaribo!5e0!3m2!1snl!2s!4v1700058273189!5m2!1snl!2s'/>
+                <IFrame src={locatie}/>
               </div>
             </div>
 

@@ -1,28 +1,32 @@
 import Image from "next/image"
 import { client } from "../_lib/client";
 import SiteContent from "../_types/SiteContent";
+import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 
 async function getHeading () {
-  const res = await client.getEntries({content_type:'siteContent', 'fields.slug': 'over-ons-banner'});
+  const res = await client.getEntries({content_type:'siteContent', 'fields.slug': 'contact-header'});
   const heading  = res.items[0].fields;
-  console.log(heading)
    return heading;
 }
 
 export default async function ContactHeader() {
   const heading: SiteContent = await getHeading();
-  const headerAfbeelding = heading.afbeelding; 
+  const {afbeelding, tekst} = heading;
+  // const headerAfbeelding = heading.afbeelding; 
+  // const 
   return (
     <div className="contact-header">
         <div className="banner">
-            <h1 className="heading-text heading-contact">Get In Touch</h1>
+            <div className="heading-text heading-contact">
+              {documentToReactComponents(tekst!)}
+            </div>
             {/* Background */}
-            <Image className='banner-img' src={`https://${headerAfbeelding?.fields.file.url}`}
+            <Image className='banner-img' src={`https://${afbeelding?.fields.file.url}`}
                 width="1000"
                 height='600'
                 alt='logo' 
                 placeholder="blur"
-                blurDataURL={'/logo.png'}
+                blurDataURL={'/images/logo.ico'}
                 priority={true}
             />
             <div className="banner-backdrop"></div>

@@ -5,7 +5,6 @@ import Questions from "./_components/Questions";
 import Samenwerking from "./_components/Samenwerking";
 import ServicesPreview from "./_components/ServicesPreview";
 import RessortCards from "./_components/RessortCards";
-import HomeSlider from "./_components/HomeSlider";
 import RessortSlider from "./_components/RessortSlider";
 import SwiperComponent from "./_components/SwiperComponent";
 import ContentfulRessortObject from "./_types/ContentfulRessortObject";
@@ -27,7 +26,7 @@ export default async function Home() {
         <RessortSlider>
           <SwiperComponent ressorten={ressorten}/>
         </RessortSlider>
-        <Samenwerking/>
+        <Samenwerking showHeader={true}/>
         <ServicesPreview/>
         <RessortCards/>
         <Questions/>

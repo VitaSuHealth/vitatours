@@ -14,7 +14,7 @@ export default function GalleryImage({image, index, OnClickHandler}:{image:Conte
           height='1000'
           alt={image.fields.title} 
           placeholder="blur"
-          blurDataURL={'/logo.png'}
+          blurDataURL={'/images/logo.ico'}
           priority={true}
           onClick={() => handleClick(image, index!)}
       />

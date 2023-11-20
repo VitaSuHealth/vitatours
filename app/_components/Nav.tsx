@@ -22,7 +22,7 @@ export default function Nav() {
                 height='100'
                 alt='logo' 
                 placeholder="blur"
-                blurDataURL={'/logo.png'}
+                blurDataURL={'/images/logo.ico'}
                 priority={true}
               /> */}
               <h1 className='branding'>VitaTours</h1>
@@ -45,7 +45,7 @@ export default function Nav() {
                 </div>
                 <div className="adres">
                   <ImLocation2 className='nav-contact-i'/>
-                  <a href="https://www.google.com/maps/place/Madeliefjes+St,+Paramaribo,+Suriname/@5.8187064,-55.181184,17z/data=!4m6!3m5!1s0x8d09cb27550a2e41:0xc50b869ebf7562a!8m2!3d5.8194322!4d-55.1815112!16s%2Fg%2F1v_ndk0l?entry=ttu" target='_blank'>
+                  <a href={adres && adres!.link} target='_blank'>
                     <p>{adres && adres.text}</p>
                   </a>
                 </div>

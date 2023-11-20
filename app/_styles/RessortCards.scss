@@ -25,9 +25,10 @@
 }
 
 .ressort-card{
-    width: 350px;
+    width: 330px;
     border: 1px solid rgba($color: #ccc, $alpha: 0.3);
     border-radius: 3px;
+    box-shadow: 5px 5px 10px var(--box-shadow-color);
 
     .afbeelding{
         margin-bottom: 1rem;

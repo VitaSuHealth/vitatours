@@ -11,6 +11,8 @@ export default function ServiceCard({service, row}: {service: contentfulReturn, 
             <Image src={`https:` + afbeelding.fields.file.url} 
                     width="1000"
                     height="1000"
+                    placeholder="blur"
+                    blurDataURL={'/images/logo.ico'}
                     alt={`${naam} image`} priority={true}/>
         </div>
         <div className="text">

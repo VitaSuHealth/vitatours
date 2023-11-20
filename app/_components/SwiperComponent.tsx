@@ -22,7 +22,7 @@ export default function SwiperComponent({gallerij, ressorten}: {gallerij?: Conte
           slidesPerView={1}
           navigation
           pagination={{ clickable: true }}
-          scrollbar={{ draggable: true }}
+          // scrollbar={{ draggable: true }}
         //   onSwiper={(swiper) => console.log(swiper)}
         //   onSlideChange={() => console.log('slide change')}
           autoplay={{delay: 7000, pauseOnMouseEnter: true}}

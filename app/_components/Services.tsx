@@ -24,9 +24,9 @@ export default async function Services() {
   return (
     <div id="services">
          <div className="heading">
-            <h2 className="section-heading">
+            <div className="section-heading">
             {documentToReactComponents(headerTekst)}
-            </h2>
+            </div>
         </div>
         <div className="columns">
             {items?.map( item  => (

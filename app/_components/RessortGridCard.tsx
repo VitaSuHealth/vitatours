@@ -32,7 +32,7 @@ export default function RessortGridCard({ressort}: {ressort: ContentfulRessortOb
                     height='1000'
                     alt={naam} 
                     placeholder="blur"
-                    blurDataURL={'/logo.png'}
+                    blurDataURL={'/images/logo.ico'}
                     priority={true}
                     />
                 </div>
