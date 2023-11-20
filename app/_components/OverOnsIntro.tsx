@@ -1,7 +1,6 @@
 import { client } from "../_lib/client";
 import Image from "next/image";
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
-import contentfulReturn from "../_types/ContentfulReturn";
 
 async function getContent () {
     const res = await client.getEntries({content_type:'siteContent', 'fields.slug': 'over-ons-column'});

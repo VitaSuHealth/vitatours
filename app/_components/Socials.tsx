@@ -3,7 +3,6 @@
 import { FaFacebook, FaTiktok, FaInstagram, FaMailBulk } from 'react-icons/fa';
 import { useContext} from 'react';
 import { ContentContext } from '../_contexts/ContentContext';
-import contactGegeven from '../_types/ContactGegeven';
 
 export default function Socials() {
   const {email, instagram,tikTok, facebook} = useContext(ContentContext);

@@ -1,7 +1,6 @@
 import {client} from "@/app/_lib/client"
 import Link from "next/link";
 import RessortCard from "./RessortCard";
-import contentfulRessort from "../_types/Ressort";
 import ContentfulRessortObject from "../_types/ContentfulRessortObject";
 
 const getRessorts = async () => {

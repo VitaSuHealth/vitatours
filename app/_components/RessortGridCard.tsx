@@ -1,8 +1,8 @@
-import ContentfulImage from "../_types/ContentfulImage";
-import ContentfulRessortObject from "../_types/ContentfulRessortObject";
 import {ImLocation2} from 'react-icons/im'
 import Image from 'next/image'
 import Link from 'next/link';
+import ContentfulRessortObject from '../_types/ContentfulRessortObject';
+import ContentfulImage from '../_types/ContentfulImage';
 
 
 export default function RessortGridCard({ressort}: {ressort: ContentfulRessortObject}) {
