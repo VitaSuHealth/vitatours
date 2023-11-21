@@ -4,13 +4,15 @@ import {Navigation, Pagination, Autoplay, Scrollbar, A11y} from 'swiper/modules'
 import ContentfulImage from '../_types/ContentfulImage'
 
 // Import Swiper styles
-import 'swiper/css';
+import "swiper/swiper.min.css"
 import 'swiper/css/navigation';
 import 'swiper/css/autoplay';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import RessortSlideItem from './RessortSlideItem';
 import ContentfulRessortObject from '../_types/ContentfulRessortObject';
+
+
 
 export default function SwiperComponent({gallerij, ressorten}: {gallerij?: ContentfulImage[], ressorten?: ContentfulRessortObject[]}) {
 
