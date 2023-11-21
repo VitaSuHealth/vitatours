@@ -8,6 +8,7 @@ import ContentfulDistrictObject from "../_types/ContentfulDistrictObject";
 
 export default function RessortSlideItem({gallerijImg, title, link, district}:{gallerijImg: ContentfulImage, title?:string, link?:string, district?:ContentfulDistrictObject}) {
 
+    console.log(`https:`+ gallerijImg.fields.file.url);
   return (
     <div className="slide-item">
          <Image className='banner-img' src={`https:`+ gallerijImg.fields.file.url}

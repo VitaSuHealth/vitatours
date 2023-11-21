@@ -22,7 +22,7 @@
 
     img{
         width: 100%;
-        height: auto;
+        height: 600px; //Cause of warning in console about Image aspaect ratio.
         // background-size: contain;
         object-fit: cover;
     }
