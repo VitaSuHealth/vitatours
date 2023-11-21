@@ -12,7 +12,7 @@ export default function RessortSlideItem({gallerijImg, title, link, district}:{g
       }
   return (
     <div className="slide-item">
-         <Image className='banner-img' src={'/images/footer-img.jpg'}
+         <Image className='banner-img' src={`https://${gallerijImg.fields.file.url}`}
             width="1000"
             height="600"
             alt='logo' 
@@ -20,6 +20,7 @@ export default function RessortSlideItem({gallerijImg, title, link, district}:{g
             placeholder="blur"
             blurDataURL={'/images/logo.ico'}
             priority={true}
+            unoptimized={true}
         />
         {title &&
             <div className="cover">
