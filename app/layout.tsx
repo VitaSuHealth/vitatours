@@ -22,8 +22,6 @@ import { Irish_Grover } from 'next/font/google'
   return (
     <html lang="nl">
       <head>
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
-
       <title>Vita Tours</title>
       </head>
       <body>

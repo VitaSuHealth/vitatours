@@ -1,26 +1,22 @@
 'use client'
 import { ImLocation2 } from "react-icons/im";
 import ContentfulImage from "../_types/ContentfulImage";
-import Image, { ImageLoader, ImageLoaderProps } from "next/image";
+import Image from "next/image";
 import Link from "next/link";
 import ContentfulDistrictObject from "../_types/ContentfulDistrictObject";
 
 
 export default function RessortSlideItem({gallerijImg, title, link, district}:{gallerijImg: ContentfulImage, title?:string, link?:string, district?:ContentfulDistrictObject}) {
-    // const contentfulImageLoader: ImageLoader = ({ src, width }: ImageLoaderProps) => {
-    //     return `${src}?w=${width}`
-    //   }
+
   return (
     <div className="slide-item">
          <Image className='banner-img' src={`https:`+ gallerijImg.fields.file.url}
             width="1000"
             height="600"
             alt='loto' 
-            // loader={contentfulImageLoader}
             placeholder="blur"
             blurDataURL={'/images/logo.ico'}
-            // priority={true}
-            unoptimized={true}
+            priority={true}
         />
         {title &&
             <div className="cover">

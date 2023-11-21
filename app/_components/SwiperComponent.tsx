@@ -5,7 +5,6 @@ import ContentfulImage from '../_types/ContentfulImage'
 
 // Import Swiper styles
 import 'swiper/css';
-import 'swiper/css/navigation';
 import 'swiper/css/autoplay';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
@@ -32,22 +31,22 @@ export default function SwiperComponent({gallerij, ressorten}: {gallerij?: Conte
           autoplay={{delay: 7000, pauseOnMouseEnter: true}}
           loop={true}
           >
-            {gallerij && (
+            {gallerij && 
               gallerij.map(image => (
                   <SwiperSlide key={image.fields.file.fileName}>
                       <RessortSlideItem gallerijImg={image}/>
                   </SwiperSlide>
               ))
-            )
+            
             }
 
-            {ressorten && (
+            {ressorten && 
               ressorten.map((ressort, index) => (
                   <SwiperSlide key={ressort.fields.slug}>
                       <RessortSlideItem gallerijImg={ressort.fields.gallerij[index]} title={ressort.fields.naam} link={ressort.fields.slug} district={ressort.fields.district}/>
                   </SwiperSlide>
               ))
-            )
+            
             }
               
           ...
