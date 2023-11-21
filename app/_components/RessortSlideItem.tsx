@@ -1,10 +1,14 @@
 'use client'
 import { ImLocation2 } from "react-icons/im";
 import ContentfulImage from "../_types/ContentfulImage";
-import Image from "next/image";
+import Image, { ImageLoader, ImageLoaderProps } from "next/image";
 import Link from "next/link";
 import ContentfulDistrictObject from "../_types/ContentfulDistrictObject";
 
+const contentfulImageLoader: ImageLoader = ({ src, width }: ImageLoaderProps) => {
+    return `${src}?w=${width}`
+  }
+  
 export default function RessortSlideItem({gallerijImg, title, link, district}:{gallerijImg: ContentfulImage, title?:string, link?:string, district?:ContentfulDistrictObject}) {
   return (
     <div className="slide-item">
@@ -12,6 +16,7 @@ export default function RessortSlideItem({gallerijImg, title, link, district}:{g
             width="1000"
             height="600"
             alt='logo' 
+            loader={contentfulImageLoader}
             placeholder="blur"
             blurDataURL={'/images/logo.ico'}
             priority={true}
