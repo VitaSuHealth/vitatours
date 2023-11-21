@@ -5,14 +5,14 @@ import Image, { ImageLoader, ImageLoaderProps } from "next/image";
 import Link from "next/link";
 import ContentfulDistrictObject from "../_types/ContentfulDistrictObject";
 
-const contentfulImageLoader: ImageLoader = ({ src, width }: ImageLoaderProps) => {
-    return `${src}?w=${width}`
-  }
-  
+
 export default function RessortSlideItem({gallerijImg, title, link, district}:{gallerijImg: ContentfulImage, title?:string, link?:string, district?:ContentfulDistrictObject}) {
+    const contentfulImageLoader: ImageLoader = ({ src, width }: ImageLoaderProps) => {
+        return `${src}?w=${width}`
+      }
   return (
     <div className="slide-item">
-         <Image className='banner-img' src={`https://${gallerijImg.fields.file.url}`}
+         <Image className='banner-img' src={'/images/footer-img.jpg'}
             width="1000"
             height="600"
             alt='logo' 
