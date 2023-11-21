@@ -5,8 +5,8 @@ import Questions from "./_components/Questions";
 import Samenwerking from "./_components/Samenwerking";
 import ServicesPreview from "./_components/ServicesPreview";
 import RessortCards from "./_components/RessortCards";
-// import RessortSlider from "./_components/RessortSlider";
-// import SwiperComponent from "./_components/SwiperComponent";
+import RessortSlider from "./_components/RessortSlider";
+import SwiperComponent from "./_components/SwiperComponent";
 import ContentfulRessortObject from "./_types/ContentfulRessortObject";
 
 const getRessorts = async () => {
@@ -23,9 +23,9 @@ export default async function Home() {
   return (
     <main className=''>
       <div className="container">
-        {/* <RessortSlider>
+        <RessortSlider>
           <SwiperComponent ressorten={ressorten}/>
-        </RessortSlider> */}
+        </RessortSlider>
         <Samenwerking showHeader={true}/>
         <ServicesPreview/>
         <RessortCards/>

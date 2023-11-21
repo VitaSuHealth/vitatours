@@ -7,8 +7,8 @@ import { client } from '@/app/_lib/client';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 import ContentfulRessortObject from '@/app/_types/ContentfulRessortObject';
 import Questions from '@/app/_components/Questions';
-// import RessortSlider from '@/app/_components/RessortSlider';
-// import SwiperComponent from '@/app/_components/SwiperComponent';
+import RessortSlider from '@/app/_components/RessortSlider';
+import SwiperComponent from '@/app/_components/SwiperComponent';
 import IFrame from '@/app/_components/IFrame';
 import GalleryImageContainer from '@/app/_components/GalleryImageContainer';
 
@@ -39,9 +39,9 @@ export default async function page({params}: { params: { slug: string } }) {
                 </h4>
               </div>
             </div>
-            {/* <RessortSlider >
+            <RessortSlider >
               <SwiperComponent gallerij = {gallerij}/>
-            </RessortSlider> */}
+            </RessortSlider>
             <div className="beschrijving">
               <div className="details-heading">
                 <ImLocation2 className='details-i'/>
