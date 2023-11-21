@@ -9,6 +9,8 @@ import 'swiper/css/navigation';
 import 'swiper/css/autoplay';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
+import 'swiper/swiper-bundle.css';
+
 import RessortSlideItem from './RessortSlideItem';
 import ContentfulRessortObject from '../_types/ContentfulRessortObject';
 
