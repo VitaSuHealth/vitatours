@@ -7,19 +7,19 @@ import ContentfulDistrictObject from "../_types/ContentfulDistrictObject";
 
 
 export default function RessortSlideItem({gallerijImg, title, link, district}:{gallerijImg: ContentfulImage, title?:string, link?:string, district?:ContentfulDistrictObject}) {
-    const contentfulImageLoader: ImageLoader = ({ src, width }: ImageLoaderProps) => {
-        return `${src}?w=${width}`
-      }
+    // const contentfulImageLoader: ImageLoader = ({ src, width }: ImageLoaderProps) => {
+    //     return `${src}?w=${width}`
+    //   }
   return (
     <div className="slide-item">
          <Image className='banner-img' src={`https://${gallerijImg.fields.file.url}`}
             width="1000"
             height="600"
             alt='logo' 
-            loader={contentfulImageLoader}
+            // loader={contentfulImageLoader}
             placeholder="blur"
             blurDataURL={'/images/logo.ico'}
-            priority={true}
+            // priority={true}
             unoptimized={true}
         />
         {title &&

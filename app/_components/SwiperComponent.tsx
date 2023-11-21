@@ -4,7 +4,7 @@ import {Navigation, Pagination, Autoplay, Scrollbar, A11y} from 'swiper/modules'
 import ContentfulImage from '../_types/ContentfulImage'
 
 // Import Swiper styles
-import "swiper/swiper.min.css"
+import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/autoplay';
 import 'swiper/css/pagination';
@@ -22,8 +22,8 @@ export default function SwiperComponent({gallerij, ressorten}: {gallerij?: Conte
           modules={[Navigation, Pagination, Autoplay, Scrollbar, A11y]}
           spaceBetween={50}
           slidesPerView={1}
-          navigation
-          pagination={{ clickable: true }}
+          // navigation
+          // pagination={{ clickable: true }}
           // scrollbar={{ draggable: true }}
         //   onSwiper={(swiper) => console.log(swiper)}
         //   onSlideChange={() => console.log('slide change')}
