@@ -121,6 +121,12 @@
         }
     }
 
+    #ressorten{
+        .ressort-cards-container{
+            justify-content: center;
+        }
+    }
+
     // OLD PROJECT SRC
 
     //Promo item
@@ -167,6 +173,9 @@ body::-webkit-scrollbar{
             }
         }
     }
+
+
+    // OLD PROJ RES
 
     .main-btn, .secundary-btn, .btn-delete {
         padding: 5px 10px;

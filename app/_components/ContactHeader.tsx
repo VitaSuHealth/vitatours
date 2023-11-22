@@ -12,8 +12,8 @@ async function getHeading () {
 export default async function ContactHeader() {
   const heading: SiteContent = await getHeading();
   const {afbeelding, tekst} = heading;
-  // const headerAfbeelding = heading.afbeelding; 
-  // const 
+  // const headerAfbeelding = heading.afbeelding;
+  
   return (
     <div className="contact-header">
         <div className="banner">
@@ -21,7 +21,7 @@ export default async function ContactHeader() {
               {documentToReactComponents(tekst!)}
             </div>
             {/* Background */}
-            <Image className='banner-img' src={`https://${afbeelding?.fields.file.url}`}
+            <Image className='banner-img' src={`https:${afbeelding?.fields.file.url}`}
                 width="1000"
                 height='600'
                 alt='logo' 

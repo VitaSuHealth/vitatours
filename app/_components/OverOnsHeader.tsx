@@ -17,7 +17,7 @@ export default async function OverOnsHeader() {
             <h1 className="heading-text heading-over-ons">Maak Kennis Met:</h1>
             <h1 className="heading-branding">Vita Tours</h1>
             {/* Background */}
-            <Image className='banner-img' src={`https://${headerAfbeelding?.fields.file.url}`}
+            <Image className='banner-img' src={`https:${headerAfbeelding?.fields.file.url}`}
                 width="1000"
                 height='600'
                 alt='logo' 

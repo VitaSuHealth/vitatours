@@ -11,7 +11,7 @@
         grid-template-columns: repeat(auto-fill, minmax(330px, 1fr)); */
         display: flex;
         flex-wrap: wrap;
-        justify-content: flex-start;
+        justify-content: space-between;
         align-items: flex-start;
         gap: 2rem;
     }
@@ -82,7 +82,8 @@
 
     .cta-card{
         width: 100%;
-        margin: 1rem 10px;
+        margin: 1rem 0px;
+        text-align: center;
 
     }
 }

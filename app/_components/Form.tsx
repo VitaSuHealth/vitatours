@@ -103,7 +103,7 @@ function Form() {
       <div className="wrapper">
           <form className='contact-form'>
             <div className="form-row">
-                <div className="name">
+                <div className="name-form">
                 <label htmlFor="user_name"><FaAsterisk size='12px' color='red' />Naam:</label>
                 <input type="text" name="user_name" id="user_name"
                     placeholder='Voornaam en Achternaam' value={naam} onChange={(e) => setNaam(e.target.value)}

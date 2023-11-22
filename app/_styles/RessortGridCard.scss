@@ -1,7 +1,8 @@
 .grid-card{
     width: 100%;
-    border: 1px solid rgba($color: #ddd8d8, $alpha: 0.5);
+    border: 1px solid rgba($color: #928f8f, $alpha: 0.5);
     padding: 10px 1rem;
+    box-shadow: 5px 5px 10px var(--box-shadow-color);
 
     #img-0{grid-area: img1;}
     #img-1{grid-area: img2;}

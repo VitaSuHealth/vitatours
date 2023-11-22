@@ -2,6 +2,8 @@
 import {Swiper, SwiperSlide} from 'swiper/react'
 import {Navigation, Pagination, Autoplay, Scrollbar, A11y} from 'swiper/modules'
 import ContentfulImage from '../_types/ContentfulImage'
+import RessortSlideItem from './RessortSlideItem';
+import ContentfulRessortObject from '../_types/ContentfulRessortObject';
 
 // Import Swiper styles
 import 'swiper/css';
@@ -10,8 +12,6 @@ import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import 'swiper/swiper-bundle.css';
 
-import RessortSlideItem from './RessortSlideItem';
-import ContentfulRessortObject from '../_types/ContentfulRessortObject';
 
 
 
@@ -23,8 +23,8 @@ export default function SwiperComponent({gallerij, ressorten}: {gallerij?: Conte
           modules={[Navigation, Pagination, Autoplay, Scrollbar, A11y]}
           spaceBetween={50}
           slidesPerView={1}
-          // navigation
-          // pagination={{ clickable: true }}
+          navigation
+          pagination={{ clickable: true }}
           // scrollbar={{ draggable: true }}
         //   onSwiper={(swiper) => console.log(swiper)}
         //   onSlideChange={() => console.log('slide change')}
