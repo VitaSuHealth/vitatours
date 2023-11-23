@@ -134,6 +134,14 @@
         }
     }
 
+    // Home slider text
+    .cover{
+        h1{
+            text-align: center;
+        }
+    }
+
+    // General slider styles
     .location-container{
         .ressort-details-i{
             font-size: var(--text-size-6);
@@ -182,19 +190,19 @@
         }
 
         .email{
-            margin-bottom: 18px;
+            margin: 5px 0 15px 0;
         }
 
         .contact-form{
             width: 100%;
 
             .form-row{
-                gap: 10px;
+                flex-direction: column;
+                gap:15px;
                 
-
                 .name-form, .phone{
                     input{
-                        width: 165px !important;
+                        width: 350px !important;
                     }
                 }
             }
@@ -218,20 +226,19 @@
 @media(max-width: 650px) {
 
     
-body::-webkit-scrollbar{
-    display: none;
-}
+    body::-webkit-scrollbar{
+        display: none;
+    }
 
-h1{
-    font-size: var(--text-size-3) !important;
-}
-h2{
-    font-size: var(--text-size-4) !important;
-}
-.branding{
-    font-size: var(--text-size-3);
-}
-    
+    h1{
+        font-size: var(--text-size-3) !important;
+    }
+    h2{
+        font-size: var(--text-size-4) !important;
+    }
+    .branding{
+        font-size: var(--text-size-3);
+    } 
 
     /* Nav */
     .nav{
@@ -263,6 +270,27 @@ h2{
         } 
     }
 
+    // General Slider styles
+    .swiper-button-next,
+    .swiper-button-prev{
+        opacity: 0;
+    }
+
+    // Form
+    #form{
+        form > * {
+            width: 280px !important;
+        }
+        .contact-form{
+            .form-row{
+                .name-form, .phone{
+                    input{
+                        width: 280px !important;
+                    }
+                }
+            }
+        }
+    }
 
     // OLD PROJ RES
 

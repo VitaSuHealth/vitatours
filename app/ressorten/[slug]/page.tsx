@@ -32,53 +32,53 @@ export default async function page({params}: { params: { slug: string } }) {
   const {naam, district, gallerij, beschrijving, locatie} = ressort.fields;
   return (
     <div id='ressort-details'>
-        <div className="container">
-            <div className="header">
-              <p className="name">
-                {naam}
-              </p>
-              <div className="location-container">
-                <ImLocation2 className='ressort-details-i'/>
-                <h4 className="location">
-                  {`${district.fields.naam}, Suriname`}
-                </h4>
-              </div>
+      <div className="container">
+          <div className="header">
+            <p className="name">
+              {naam}
+            </p>
+            <div className="location-container">
+              <ImLocation2 className='ressort-details-i'/>
+              <h4 className="location">
+                {`${district.fields.naam}, Suriname`}
+              </h4>
             </div>
-            <RessortSlider >
-              <SwiperComponent gallerij = {gallerij}/>
-            </RessortSlider>
-            <div className="beschrijving">
-              <div className="details-heading">
-                <TbFileDescription className='details-i'/>
-                <h3 className="name">Beschrijving:</h3>
-                
-              </div>
-              <div className="content">
-                  {documentToReactComponents(beschrijving)}
-                </div>
+          </div>
+          <RessortSlider >
+            <SwiperComponent gallerij = {gallerij}/>
+          </RessortSlider>
+          <div className="beschrijving">
+            <div className="details-heading">
+              <TbFileDescription className='details-i'/>
+              <h3 className="name">Beschrijving:</h3>
+              
             </div>
+            <div className="content">
+                {documentToReactComponents(beschrijving)}
+              </div>
+          </div>
 
-            <div className="locatie">
-              <div className="details-heading">
-                <ImLocation2 className='details-i'/>
-                <h3 className="name">Locatie:</h3>
-              </div>
-              <div className="content">
-                <IFrame src={locatie}/>
-              </div>
+          <div className="locatie">
+            <div className="details-heading">
+              <ImLocation2 className='details-i'/>
+              <h3 className="name">Locatie:</h3>
             </div>
+            <div className="content">
+              <IFrame src={locatie}/>
+            </div>
+          </div>
 
-            <div className="gallerij">
-              <div className="details-heading">
-                <TfiGallery className='details-i'/>
-                <h3 className="name">Gallerij:</h3>
-              </div>
-                <GalleryImageContainer gallerij={gallerij}/>
+          <div className="gallerij">
+            <div className="details-heading">
+              <TfiGallery className='details-i'/>
+              <h3 className="name">Gallerij:</h3>
             </div>
-          <Questions/>
-          <ContactLinks/>
-          <FormSection/>
-        </div>
+              <GalleryImageContainer gallerij={gallerij}/>
+          </div>
+        <Questions/>
+        <ContactLinks/>
+      </div>
+      <FormSection/>
     </div>
   )
 }
