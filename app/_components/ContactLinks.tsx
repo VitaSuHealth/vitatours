@@ -1,5 +1,6 @@
 import Link from "next/link"
 import { FaPhone, FaLocationArrow} from 'react-icons/fa'
+import { ImLocation2 } from "react-icons/im"
 
 
 export default function ContactLinks() {
@@ -18,6 +19,7 @@ export default function ContactLinks() {
                 </div>
                 <div className="location">
                     <div className="icon">
+                        {/* <ImLocation2 size="2.5rem" /> */}
                         <FaLocationArrow size="2.5rem"/>
                     </div>
                     <div className="title">Location:</div>

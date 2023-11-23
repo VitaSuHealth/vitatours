@@ -125,24 +125,92 @@
         .ressort-cards-container{
             justify-content: center;
         }
+
     }
 
-    // OLD PROJECT SRC
-
-    //Promo item
-    .promo-text{
-        width: 55% !important;
-    }
-
-    //Doelen cards
-
-    .doelen-container{
-        .logo-bg{
-            height:150px;
-            width: 150px;
-            top: -8% !important;
+    .grid-card{
+        .ressort-gallery{
+            grid-template-rows: 130px 130px;
         }
     }
+
+    .location-container{
+        .ressort-details-i{
+            font-size: var(--text-size-6);
+        }
+        h4{
+            font-size: var(--text-size-5);
+        }
+    }
+
+
+    // Modal Image
+
+    .overlay{
+        img{
+            max-width: 630px;
+            max-height: 85%;
+        } 
+    }
+
+    #form{
+        width: 100%;
+        margin: 0 auto;
+        min-width: 300px;
+
+        .wrapper{
+            width: 95%;
+        }
+
+        form > * {
+            width: 350px;
+        }
+
+        input, textarea{
+            width: 100%;
+        }
+    
+        input{
+            height: 30px;
+        }
+    
+        label{
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .email{
+            margin-bottom: 18px;
+        }
+
+        .contact-form{
+            width: 100%;
+
+            .form-row{
+                gap: 10px;
+                
+
+                .name-form, .phone{
+                    input{
+                        width: 165px !important;
+                    }
+                }
+            }
+
+        }
+    
+        .bevestigen{
+            width: 200px;
+
+            input{
+                font-size: 18px !important;
+            }
+        }
+
+    }
+
     
 
 }
@@ -152,6 +220,16 @@
     
 body::-webkit-scrollbar{
     display: none;
+}
+
+h1{
+    font-size: var(--text-size-3) !important;
+}
+h2{
+    font-size: var(--text-size-4) !important;
+}
+.branding{
+    font-size: var(--text-size-3);
 }
     
 
@@ -172,6 +250,17 @@ body::-webkit-scrollbar{
                 
             }
         }
+    }
+
+    .gallery-img{
+        width: 330px;
+    }
+
+    .overlay{
+        img{
+            max-width: 320px;
+            max-height: 85%;
+        } 
     }
 
 

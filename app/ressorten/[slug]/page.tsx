@@ -1,6 +1,11 @@
 import ContactLinks from '@/app/_components/ContactLinks'
 import FormSection from '@/app/_components/FormSection'
 import {ImLocation2} from 'react-icons/im'
+import { TfiGallery } from "react-icons/tfi";
+import { TbFileDescription } from "react-icons/tb";
+import { GrGallery } from "react-icons/gr";
+
+
 
 
 import { client } from '@/app/_lib/client';
@@ -44,7 +49,7 @@ export default async function page({params}: { params: { slug: string } }) {
             </RessortSlider>
             <div className="beschrijving">
               <div className="details-heading">
-                <ImLocation2 className='details-i'/>
+                <TbFileDescription className='details-i'/>
                 <h3 className="name">Beschrijving:</h3>
                 
               </div>
@@ -65,7 +70,7 @@ export default async function page({params}: { params: { slug: string } }) {
 
             <div className="gallerij">
               <div className="details-heading">
-                <ImLocation2 className='details-i'/>
+                <TfiGallery className='details-i'/>
                 <h3 className="name">Gallerij:</h3>
               </div>
                 <GalleryImageContainer gallerij={gallerij}/>

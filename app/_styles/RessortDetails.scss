@@ -1,6 +1,7 @@
 #ressort-details{
     .details-heading{
         display: flex;
+        align-items: flex-end;
         gap: 10px;
         padding: 5px;
         border-bottom: 1px solid var(--main-color);
@@ -8,14 +9,10 @@
         
         .details-i{
             font-size: var(--text-size-4);
-            color: var(--suriname);
-            text-shadow: 5px 5px 12px var(--suriname);
-            background: var(--suriname);
-            -webkit-text-fill-color: transparent; 
-            -webkit-background-clip: text; 
+            margin-bottom: 10px;
         }
 
-        h3{
+        h4{
             font-size: var(--text-size-4);
         }
     }
@@ -61,9 +58,11 @@
     justify-content: center;    
 }
 
+
 .name{
     font-size: 2rem;
     font-weight: bold;
+    text-align: center;
     margin-top: 2rem;
     text-shadow: 5px 5px 12px var(--suriname);
     background: var(--suriname);

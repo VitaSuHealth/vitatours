@@ -14,6 +14,21 @@
     box-shadow: 15px 15px 20px var(--box-shadow-color);
 }
 
+.swiper-button-next,
+.swiper-button-prev{
+    padding: 2rem !important;
+    background-color: rgba($color: #000000, $alpha: 0.2);
+    border-radius: 10px;
+    color: var(--off-white) !important;
+}
+
+// .swiper-pagination-bulets > *{
+//     z-index: 1000;
+//     // background-color: hotpink !important;
+//     background: rgb(33,102,34);
+//     background: linear-gradient(90deg, rgba(33,102,34,0.9725140056022409) 14%, rgba(255,255,255,1) 27%, rgba(232,5,5,1) 56%, rgba(237,255,0,1) 94%);
+// }
+
 .slide-item{
     width: 100%;
     height: 100%;
