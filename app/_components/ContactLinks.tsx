@@ -2,7 +2,6 @@ import Link from "next/link"
 import { FaPhone, FaLocationArrow} from 'react-icons/fa'
 import { ImLocation2 } from "react-icons/im"
 
-
 export default function ContactLinks({contactLink}: {contactLink?:boolean}) {
   return (
     <div className='contact-links'>
@@ -39,4 +38,8 @@ export default function ContactLinks({contactLink}: {contactLink?:boolean}) {
         </div>
     </div>
   )
+}
+
+ContactLinks.defaultProps = {
+    contactLinks: true
 }
