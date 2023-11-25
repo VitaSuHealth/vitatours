@@ -9,7 +9,7 @@ import { FaAsterisk } from 'react-icons/fa'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-function Form() {
+function Form({subject}: {subject?: string}) {
   const [template, setTemplate] = useState(null);
   const [stringOrder, setStringOrder] = useState('');
 
@@ -117,9 +117,15 @@ function Form() {
                 </div>
             </div>
             <div className="email">
-              <label htmlFor="user_email">Email</label>
+              <label htmlFor="user_email">Email:</label>
               <input type="email" name="user_email" id="user_email"
                 placeholder='Email (niet verplicht)'
+              />
+            </div>
+            <div className="onderwerp">
+              <label htmlFor="user_subject">Onderwerp:</label>
+              <input type="text" name="user_subject" id="user_subject"
+                placeholder='Onderwerp' value={subject && `Trip naar: ${subject}`} readOnly={subject ? true : false}
               />
             </div>
             <div className="bericht">

@@ -1,15 +1,15 @@
 import Link from 'next/link'
 import React from 'react'
 
-function Questions() {
+function Questions({q1, q2, q3, q4}: {q1?: string, q2?: string, q3?:string, q4:string}) {
   return (
     <section id='questions'>
         <div className="container">
             <div className="question-group">
-                <p className="q1">Heb je een vraag over wat wij aanbieden?</p>
-                <p className="q2">Of</p>
-                <p className="q3">Wilt u nog meer info over de ressorten?</p>
-                <p className="q4">Aarzel niet en neem contact op met ons.</p>
+              {q1 && <p className="q1">{q1}</p>}
+              {q2 && <p className="q2">{q2}</p>}
+              {q3 && <p className="q3">{q3}</p>}
+              {q4 && <p className="q4">{q4}</p>}
 
             </div>
             

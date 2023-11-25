@@ -3,7 +3,7 @@ import { FaPhone, FaLocationArrow} from 'react-icons/fa'
 import { ImLocation2 } from "react-icons/im"
 
 
-export default function ContactLinks() {
+export default function ContactLinks({contactLink}: {contactLink?:boolean}) {
   return (
     <div className='contact-links'>
         <div className="wrapper">
@@ -27,12 +27,14 @@ export default function ContactLinks() {
                             Madeliefjestraat #15
                         </div>
             </div>
+            { contactLink &&
             <div className="contact-link">
                 <div className="title">Een bericht via ons formulier</div>
                 <div className="content">
                     <Link href='/contact#form' className="main-btn">Contact</Link>
                 </div>
             </div>
+            }
             </div>
         </div>
     </div>

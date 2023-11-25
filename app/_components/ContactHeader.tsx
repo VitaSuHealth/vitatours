@@ -16,20 +16,20 @@ export default async function ContactHeader() {
   
   return (
     <div className="contact-header">
-        <div className="banner">
+        <div className="banner" style={{backgroundImage: `url(${afbeelding?.fields.file.url})`}}>
             <div className="heading-text heading-contact">
               {documentToReactComponents(tekst!)}
             </div>
             {/* Background */}
-            <Image className='banner-img' src={`https:${afbeelding?.fields.file.url}`}
+            {/* <Image className='banner-img' src={`https:${afbeelding?.fields.file.url}`}
                 width="1000"
                 height='600'
                 alt='logo' 
                 placeholder="blur"
                 blurDataURL={'/images/logo.ico'}
                 priority={true}
-            />
-            <div className="banner-backdrop"></div>
+            /> */}
+            {/* <div className="banner-backdrop"></div> */}
         </div>
     </div>
   )

@@ -3,7 +3,6 @@ import FormSection from '@/app/_components/FormSection'
 import {ImLocation2} from 'react-icons/im'
 import { TfiGallery } from "react-icons/tfi";
 import { TbFileDescription } from "react-icons/tb";
-import { GrGallery } from "react-icons/gr";
 
 
 
@@ -27,9 +26,15 @@ const getRessort = async (slug: string) => {
 export default async function page({params}: { params: { slug: string } }) {
   const {slug} = params;
   const ressort : ContentfulRessortObject = await getRessort(slug);
-
-
+  
   const {naam, district, gallerij, beschrijving, locatie} = ressort.fields;
+    
+  //Footer Questions
+    const q4: string = 'Wilt U Dit Ressort Bezoeken?'
+
+  //Form section heading
+    const heading: string = 'Of Maak Contact Via Ons Formulier'
+
   return (
     <div id='ressort-details'>
       <div className="container">
@@ -75,10 +80,10 @@ export default async function page({params}: { params: { slug: string } }) {
             </div>
               <GalleryImageContainer gallerij={gallerij}/>
           </div>
-        <Questions/>
-        <ContactLinks/>
+        <Questions q4={q4}/>
+        <ContactLinks contactLink={false}/>
       </div>
-      <FormSection/>
+      <FormSection heading={heading} showSocials={false} subject={naam}/>
     </div>
   )
 }

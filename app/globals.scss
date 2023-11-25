@@ -39,9 +39,9 @@
 :root {
     --main-font: 'Inter', sans-serif;
     --second-font: 'Roboto Flex', sans-serif;
-    --header-font: 'Irish Grover', sans-serif;
+    // --header-font: 'Irish Grover', sans-serif;
+    --header-font: 'Poppins', sans-serif;
     --special-font: 'Lobster', sans-serif;
-
     
     --text-size-1: 48px;
     --text-size-2: 40px;
@@ -128,7 +128,7 @@ ul{
 
 
 h1{
-    font-size: var(--text-size-1);
+    font-size: var(--text-size-2);
 }
 h2{
     font-size: var(--text-size-3);

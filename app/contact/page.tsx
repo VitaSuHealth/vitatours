@@ -1,18 +1,16 @@
-import Link from "next/link"
-import Image from "next/image"
 import ContactHeader from "../_components/ContactHeader"
 import ContactLinks from "../_components/ContactLinks"
-import Questions from "../_components/Questions"
 import FormSection from "../_components/FormSection"
 function index() {
+  //Form section heading
+  const heading: string = 'Laat Ons Weten Waarmee Wij U Van Dienst Kunnen Zijn.'
   return (
     <>
         <ContactHeader/>
         <div className="container">
-          <Questions/>
           <ContactLinks/>
         </div>
-        <FormSection/>
+        <FormSection heading={heading} showSocials={true}/>
     </>
   )
 }
