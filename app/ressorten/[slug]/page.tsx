@@ -18,7 +18,7 @@ import GalleryImageContainer from '@/app/_components/GalleryImageContainer';
 
 const getRessort = async (slug: string) => {
     const res = await client.getEntries({content_type:'ressort', 'fields.slug': slug});
-    const ressort  = res.items[0];
+    const ressort  = await res.items[0];
      return ressort;
 }
 

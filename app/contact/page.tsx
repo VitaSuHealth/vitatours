@@ -8,7 +8,7 @@ function index() {
     <>
         <ContactHeader/>
         <div className="container">
-          <ContactLinks/>
+          <ContactLinks contactLink={false}/>
         </div>
         <FormSection heading={heading} showSocials={true}/>
     </>

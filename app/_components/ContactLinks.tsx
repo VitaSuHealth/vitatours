@@ -41,5 +41,5 @@ export default function ContactLinks({contactLink}: {contactLink?:boolean}) {
 }
 
 ContactLinks.defaultProps = {
-    contactLinks: true
+    contactLink: true
 }

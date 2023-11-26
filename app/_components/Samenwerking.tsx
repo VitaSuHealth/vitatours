@@ -5,13 +5,13 @@ import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 
 async function getContent () {
     const res = await client.getEntries({content_type:'siteContent', 'fields.slug': 'samenwerking'});
-    const fields  = res.items[0].fields;
+    const fields  = await res.items[0].fields;
      return fields;
 }
 
 async function getHeading () {
     const res = await client.getEntries({content_type:'siteContent', 'fields.slug': 'heading-home-1'});
-    const heading  = res.items[0].fields;
+    const heading  = await res.items[0].fields;
      return heading;
 }
 

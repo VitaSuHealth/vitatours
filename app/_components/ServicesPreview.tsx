@@ -6,13 +6,13 @@ import contentfulReturn from "../_types/ContentfulReturn";
 
 async function getDiensten () {
     const res = await client.getEntries({content_type:'diensten'});
-    const items  = res.items;
+    const items  = await res.items;
      return items;
 }
 
 async function getHeading () {
     const res = await client.getEntries({content_type:'siteContent', 'fields.slug': 'heading-home-2'});
-    const heading  = res.items[0].fields;
+    const heading  = await res.items[0].fields;
      return heading;
 }
 
