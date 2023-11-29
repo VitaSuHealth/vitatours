@@ -12,11 +12,13 @@ export default function page() {
     const q2: string = 'Of'
     const q3: string = 'Wilt u nog meer info over de ressorten?'
     const q4: string = 'Aarzel niet en neem contact op met ons.'
+
+    //Test
     
   return (
     <div>
         <OverOnsHeader/>
-        <div className="container">
+        <div className="container">  
           <OverOnsIntro/>
           <Services/>
           <Samenwerking showHeader={false}/>
