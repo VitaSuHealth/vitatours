@@ -8,6 +8,24 @@ import RessortCards from "./_components/RessortCards";
 import RessortSlider from "./_components/RessortSlider";
 import SwiperComponent from "./_components/SwiperComponent";
 import ContentfulRessortObject from "./_types/ContentfulRessortObject";
+import type { Metadata } from 'next'
+ 
+export const metadata: Metadata = {
+  title: 'Vita Tours - Home',
+  description: 'Vita Tours - Home',
+  openGraph: {
+    title: `Vita Tours- Home`,
+    images: [
+      {
+        url: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.vitahealth.sr%2F&psig=AOvVaw0Ummre69IhdHXm4UyZCnHS&ust=1701542198029000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCMiev-Tw7oIDFQAAAAAdAAAAABAH",
+        width: 1200,
+        height: 630,
+        alt: `Vita Tours  image`
+      }
+    ],
+  },
+}
+
 
 const getRessorts = async () => {
   const result = await client.getEntries({ content_type: "ressort" });
@@ -15,8 +33,6 @@ const getRessorts = async () => {
   // console.log(items)
   return items;
 };
-
-
 
 
 export default async function Home() {

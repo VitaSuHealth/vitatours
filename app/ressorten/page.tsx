@@ -4,12 +4,30 @@ import ContactLinks from '../_components/ContactLinks'
 import RessortGridCard from '../_components/RessortGridCard'
 import { client } from '@/app/_lib/client';
 import ContentfulRessortObject from '../_types/ContentfulRessortObject';
+import type { Metadata } from 'next'
 
 
 const getRessorts = async () => {
   const res = await client.getEntries({content_type:'ressort'});
   const ressorten  = await res.items;
    return ressorten;
+}
+
+ 
+export const metadata: Metadata = {
+  title: 'Vita Tours - Ressorten',
+  description: 'Vita Tours - Ressorten',
+  openGraph: {
+    title: `Vita Tours- Ressorten`,
+    images: [
+      {
+        url: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.vitahealth.sr%2F&psig=AOvVaw0Ummre69IhdHXm4UyZCnHS&ust=1701542198029000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCMiev-Tw7oIDFQAAAAAdAAAAABAH",
+        width: 1200,
+        height: 630,
+        alt: `Vita Tours Ressort  image`
+      }
+    ],
+  },
 }
 
 export default async function page() {

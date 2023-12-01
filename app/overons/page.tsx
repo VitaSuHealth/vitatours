@@ -4,6 +4,25 @@ import Samenwerking from '../_components/Samenwerking'
 import Services from '../_components/Services'
 import OverOnsHeader from '../_components/OverOnsHeader'
 import OverOnsIntro from '../_components/OverOnsIntro'
+import type { Metadata } from 'next'
+
+
+ 
+export const metadata: Metadata = {
+  title: 'Vita Tours - Over Ons',
+  description: 'Vita Tours - Over Ons',
+  openGraph: {
+    title: `Vita Tours- Over Ons`,
+    images: [
+      {
+        url: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.vitahealth.sr%2F&psig=AOvVaw0Ummre69IhdHXm4UyZCnHS&ust=1701542198029000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCMiev-Tw7oIDFQAAAAAdAAAAABAH",
+        width: 1200,
+        height: 630,
+        alt: `Vita Tours About  image`
+      }
+    ],
+  },
+}
 
 export default function page() {
 
