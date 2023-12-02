@@ -1,0 +1,31 @@
+.active-filter{
+    margin-left: 1rem;
+    h2{
+        text-transform: capitalize;
+    } 
+}
+
+.tags .filter-header{
+    margin: 10px 0 10px 1rem;
+    font-size: 1rem;
+    opacity: 0.6;
+}
+
+.tag-group{
+    // margin-top: 5px;
+    height: 100%;
+    padding: 0 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.not-found-wrapper{
+    margin-top: 1rem;
+    text-align: center;
+    min-height: 150px;
+    width: 80%;
+    min-width: 350px;
+    margin: 0 auto;
+}

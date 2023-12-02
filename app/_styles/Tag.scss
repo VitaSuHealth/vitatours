@@ -1,0 +1,18 @@
+//Tag body
+.tag-body{
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+    padding: 10px 20px;
+    border-radius: 10px;
+    background-color: var(--tag-color);
+    font-size: var(--text-size-5);
+    color: var(--off-white);
+    cursor: pointer;
+}
+
+.tag-body-dark{
+    background-color: var(--text-color);
+    color: var(--main-color);
+    border: 1px solid var(--off-white);
+    font-weight: 600;
+}

@@ -5,12 +5,20 @@ import RessortGridCard from '../_components/RessortGridCard'
 import { client } from '@/app/_lib/client';
 import ContentfulRessortObject from '../_types/ContentfulRessortObject';
 import type { Metadata } from 'next'
+import Tag from '../_components/Tag';
+import ContentfulDistrictObject from '../_types/ContentfulDistrictObject';
+import NotFoundComponent from '../_components/NotFoundComponent';
 
 
 const getRessorts = async () => {
   const res = await client.getEntries({content_type:'ressort'});
   const ressorten  = await res.items;
    return ressorten;
+}
+const getDistricts = async () => {
+  const res = await client.getEntries({content_type:'district'});
+  const districten  = await res.items;
+   return districten;
 }
 
  
@@ -30,26 +38,64 @@ export const metadata: Metadata = {
   },
 }
 
-export default async function page() {
+export default async function page({searchParams}: {searchParams: {[key: string]: string | string[] | undefined }}) {
+  const activeDistrict = searchParams.district || 'All';
 
   const ressorten : ContentfulRessortObject[] = await getRessorts();
+  const districten: ContentfulDistrictObject[] = await getDistricts();
+
+  let filteredRessrt: ContentfulRessortObject[] = ressorten;
+
+  //On Filter change
+  const filteredRessorten = () => {
+
+    if(activeDistrict == 'All') {
+      return;
+    }
+
+    let filtr: ContentfulRessortObject[] = [];
+    ressorten.forEach((ressort: ContentfulRessortObject) => {
+      ressort.fields.district.fields.slug == activeDistrict && filtr.push(ressort)
+    })
+
+    filteredRessrt = filtr;
+
+  }
+
+  filteredRessorten();
+  
   
     //Footer Questions
     const q1: string = 'Heb je een vraag over wat wij aanbieden?'
     const q2: string = 'Of'
     const q3: string = 'Wilt u nog meer info over de ressorten?'
     const q4: string = 'Aarzel niet en neem contact op met ons.'
-    
+
   return (
     <div id='ressorten'>
         <div className="container">
-        <div className="ressort-cards-container">
-            {ressorten.map( ressort  => (
+        <div className="active-filter">
+        <h2>{activeDistrict}</h2>
+      </div>
+      <div className="tags">
+        <div className="filter-header">
+          Filters
+        </div>
+        <div className="tag-group">
+          {districten.map( district => (
+          <Tag key={district.fields.slug} district={district.fields} dark={district.fields.slug !== activeDistrict ? false : true}/>
+          ))}
+        </div>
+      </div>
+        {filteredRessrt.length == 0 ? <NotFoundComponent message='Geen ressort gevonden in dit district..📍' /> 
+          :  
+          <div className="ressort-cards-container">
+            {filteredRessrt.map( ressort  => (
                 <RessortGridCard ressort= {ressort} key={ressort.fields.slug}/>
             ))
             }
         </div>
-
+        }
         <Questions q1={q1} q2={q2} q3={q3} q4={q4}/>
           <ContactLinks/>
         </div>
