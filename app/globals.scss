@@ -28,6 +28,7 @@
 @import './_styles/ImageModal.scss';
 @import './_styles/MediaQueries.scss';
 @import './_styles/Tag.scss';
+@import './_styles/MiniLoader.scss';
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Irish+Grover&family=Lobster&family=Poppins:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Roboto+Flex:opsz,wght@8..144,300;8..144,400;8..144,500;8..144,600;8..144,700;8..144,800&display=swap');
 
@@ -187,7 +188,7 @@ p{
     width: 90%;
     max-width: 1500px;
     height: 100%;
-    margin: 0 auto;
+    margin: 85px auto 0;
 }
 
 

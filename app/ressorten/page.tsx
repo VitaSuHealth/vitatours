@@ -8,6 +8,7 @@ import type { Metadata } from 'next'
 import Tag from '../_components/Tag';
 import ContentfulDistrictObject from '../_types/ContentfulDistrictObject';
 import NotFoundComponent from '../_components/NotFoundComponent';
+import District from '../_types/District';
 
 
 const getRessorts = async () => {
@@ -45,11 +46,12 @@ export default async function page({searchParams}: {searchParams: {[key: string]
   const districten: ContentfulDistrictObject[] = await getDistricts();
 
   let filteredRessrt: ContentfulRessortObject[] = ressorten;
+  const allDistrictObject: District = { naam: 'All', slug: 'all'}
 
   //On Filter change
   const filteredRessorten = () => {
 
-    if(activeDistrict == 'All') {
+    if(activeDistrict == 'All' || activeDistrict == 'all') {
       return;
     }
 
@@ -82,8 +84,9 @@ export default async function page({searchParams}: {searchParams: {[key: string]
           Filters
         </div>
         <div className="tag-group">
+        <Tag district={allDistrictObject} dark={(allDistrictObject.slug == activeDistrict) || (activeDistrict == 'All')}/>
           {districten.map( district => (
-          <Tag key={district.fields.slug} district={district.fields} dark={district.fields.slug !== activeDistrict ? false : true}/>
+          <Tag key={district.fields.slug} district={district.fields} dark={district.fields.slug == activeDistrict}/>
           ))}
         </div>
       </div>

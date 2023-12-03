@@ -8,7 +8,7 @@ export default function FormSection({heading, showSocials, subject}: {heading: s
       {showSocials && <Socials/> }
         <div className="spacer"></div>
         <div className="form-heading">
-            <h3>{heading}</h3>
+            <h4>{heading}</h4>
         </div>
         <div className="form-p">
             <p>Wij koppelen zou gauw mogelijk terug met u.</p>
