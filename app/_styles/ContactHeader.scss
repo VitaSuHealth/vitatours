@@ -5,6 +5,9 @@
     font-size: var(--text-size-1);
     color: var(--main-color);
     font-family: var(--header-font);
+    opacity: 0;
+    transform: translateY(20px); /* Initial position off-screen */
+    animation: fadeIn 1s ease-out forwards; /* Animation duration and easing */
 }
 
 .heading-contact{

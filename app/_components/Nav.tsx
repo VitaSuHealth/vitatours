@@ -7,6 +7,7 @@ import { FaBars, FaTimesCircle, FaPhone} from 'react-icons/fa'
 import {ImLocation2} from 'react-icons/im'
 import { ContentContext } from '../_contexts/ContentContext'
 
+
 export default function Nav() {
   const [showMenu, setShowMenu] = useState(false);
   const {adres, telNummer} = useContext(ContentContext);

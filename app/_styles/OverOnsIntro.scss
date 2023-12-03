@@ -1,5 +1,8 @@
 #about-intro{
     margin: 1rem 0 3rem;
+    opacity: 0;
+    transform: translateY(20px); /* Initial position off-screen */
+    animation: fadeIn 1s ease-out forwards; /* Animation duration and easing */
     .intro-container{
         width: 100%;
         display: flex;
