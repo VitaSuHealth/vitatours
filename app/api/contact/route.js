@@ -9,10 +9,10 @@ export async function POST(request) {
                       -------------------------------------------------------------\n
                       Afkomstig van: ${data.naam} \n
                       -------------------------------------------------------------\n
+                      Het bericht: ${data.bericht} \n
+                      -------------------------------------------------------------\n
                       Te bereiken op: ${data.telNummer} \n
                       Email adres: ${data.email} \n
-                      -------------------------------------------------------------\n
-                      Het bericht: ${data.bericht} \n
                       -------------------------------------------------------------\n
                       Hopende je voldoende te hebben geinformeerd.\n
                       Met vriendelijke groet,\n \n
@@ -22,12 +22,13 @@ export async function POST(request) {
                   `
                     <h3>Hallo, er is een nieuw bericht binnengekomen via de website.</h3>
                     <hr/>
-                    <h3>Afkomstig van: ${data.naam}</h3>
-                    <h3>Te bereiken op: ${data.telNummer}</h3>
-                    <h3>Email adres: ${data.email}</h3>
+                    <h3><b>Afkomstig van:</b> ${data.naam}</h3>
                     <hr />
-                    <h3>Het bericht: <br/> ${data.bericht}</h3>
+                    <h3>Het bericht:</b> <br/> ${data.bericht}</h3>
                     <hr />
+                    <h3><b>Te bereiken op:</b>${data.telNummer}</h3>
+                    <h3><b>Email adres:</b>${data.email}</h3>
+                    <hr/>
                     <p>Hopende je voldoende te hebben geinformeerd. <br />
                         Met vriendelijke groet,<br /><br />
                         De Vita tours website
