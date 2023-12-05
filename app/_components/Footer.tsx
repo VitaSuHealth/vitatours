@@ -13,7 +13,7 @@ export default function Footer() {
 
   return (
     <footer className='footer'>
-        <div className="container">
+        <div className="container-footer">
             <div className='footer-columns'>
                 <div className="column-left">
                     <div className="openingstijden">

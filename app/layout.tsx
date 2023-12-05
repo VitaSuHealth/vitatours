@@ -35,8 +35,8 @@ export const metadata: Metadata = {
             <ContentProvider>
               <Nav />
               {children}
-              <ToastContainer />
               <Footer/>
+              <ToastContainer />
             </ContentProvider>
       </body>
     </html>
