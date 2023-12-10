@@ -30,6 +30,7 @@ export const metadata: Metadata = {
     <html lang="nl">
       <head>
       <title>Vita Tours</title>
+      <meta name="google-site-verification" content="smonGHGxcRMn9Mlj5_L52jYrolrhr0YrOEVKsM628fE" />
       </head>
       <body>
             <ContentProvider>
