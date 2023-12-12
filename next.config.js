@@ -8,7 +8,7 @@ const nextConfig = {
         CONTENTFUL_ACCES_KEY: "HokQja3YmE2SrqcieX-VKM7TDD0ibWleJvtt9Vb80wg",
         CONTENTFUL_ENVIRONMENT: "master",
         NODEMAILER_EMAIL: "vitahealth.su@gmail.com",
-        NODEMAILER_CCEMAIL: "b.egers@unasat.sr",
+        NODEMAILER_CCEMAIL: "bengieegers@gmail.com",
         NODEMAILER_PASS: "csdl okbe ixjh xcr"
     }
 }
