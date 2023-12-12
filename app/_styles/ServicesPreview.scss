@@ -23,21 +23,28 @@
     justify-content: center;
     align-items: flex-start;
     gap: 2rem;
+    opacity: 0;
+    transition: opacity 1s ease-out;
+    animation: auto linear slide-from-left both;
+    animation-timeline: view();
+    animation-range: entry 2% cover 10%;
 }
 
 .min-w{
     width: 350px;
     flex-direction: column;
 }
+
 .service-card{
     display: flex;
     flex-wrap: wrap;
     gap: 2rem;
     padding-bottom: 1rem;
     border-bottom: 2px solid var( --box-shadow-color);
-    animation: auto linear slide-from-left both;
-    animation-timeline: view();
-    animation-range: entry 5% cover 25%;
+    opacity: 0;
+    transform: translateY(20px); /* Initial position off-screen */
+    animation: fadeIn 1s ease-out forwards; /* Animation duration and easing */
+
     .afbeelding{
         flex: 1;
         min-width: 350px;

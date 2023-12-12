@@ -1,14 +1,17 @@
 .heading-text{
     margin-top: 4rem;
     text-align: center;
-    z-index: 20;
+    z-index: 500;
     font-size: var(--text-size-1);
     color: var(--main-color);
     font-family: var(--header-font);
     opacity: 0;
     transform: translateY(20px); /* Initial position off-screen */
-    animation: fadeIn 1s ease-out forwards; /* Animation duration and easing */
+    animation: fadeIn 1.5s ease-in-out forwards; /* Animation duration and easing */
 }
+
+
+
 
 .heading-contact{
     padding-top: 120px;
@@ -23,13 +26,25 @@
     font-size: 4rem;
     color: var(--off-white);
     font-family: var(--special-font);
+    z-index: 500;
 }
 
 .contact-header{
     height: 340px;
+    text-shadow:
+    -5px -5px 8px rgba($color: #546859, $alpha: 0.5),
+    5px -5px 8px var(--header-shadow-color),
+    -5px 5px 8px var(--header-shadow-color),
+    5px 5px 8px var(--header-shadow-color);
+
 }
 .over-ons-header{
     height: 360px;
+    text-shadow:
+    -5px -5px 8px rgba($color: #546859, $alpha: 0.5),
+    5px -5px 8px var(--header-shadow-color),
+    -5px 5px 8px var(--header-shadow-color),
+    5px 5px 8px var(--header-shadow-color);
 }
 
 .banner{
@@ -37,8 +52,8 @@
     position: relative;
     width: 100%;
     height: 100%;
-    background-color: rgba($color: #000000, $alpha: 0.4);
-        background-attachment: fixed;
+    background-color: rgba($color: #000000, $alpha: 0.5);
+    background-attachment: fixed;
     background-position: center;
     background-size: cover;
     background-blend-mode: darken;

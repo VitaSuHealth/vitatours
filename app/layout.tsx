@@ -30,6 +30,7 @@ export const metadata: Metadata = {
     <html lang="nl">
       <head>
       <title>Vita Tours</title>
+      <meta name="keywords" content="Tours, Suriname, Ressorten in Suriname, Vitahealth, Vitatours Suriname, Trip organizeren in Suriname, Vita, SR, Trip naar Suriname, Recreatie oorden in Suriname "/>
       <meta name="google-site-verification" content="smonGHGxcRMn9Mlj5_L52jYrolrhr0YrOEVKsM628fE" />
       </head>
       <body>

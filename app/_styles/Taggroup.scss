@@ -19,6 +19,9 @@
     flex-wrap: wrap;
     justify-content: flex-start;
     align-items: flex-start;
+    opacity: 0;
+    transform: translateY(20px); /* Initial position off-screen */
+    animation: fadeIn 0.5s ease-out forwards; /* Animation duration and easing */
 }
 
 .not-found-wrapper{
