@@ -18,9 +18,9 @@
             overflow-x: hidden;
             min-width: 350px;
             height: 350px;
-            animation: auto linear slide-from-left both;
-            animation-timeline: view();
-            animation-range: entry 10% cover 35%;
+            // animation: auto linear slide-from-left both;
+            // animation-timeline: view();
+            // animation-range: entry 10% cover 35%;
 
             img{
                 width: 75%;
@@ -75,7 +75,7 @@
     width: 100%;
     text-align: center;
     padding: 1rem 0;
-    font-family: var(--header-font);
+    font-family: var(--section-font);
     color: var(--main-color);
     text-shadow: 1px 1px 3px rgba($color: #000000, $alpha: 0.2);
 }

@@ -31,9 +31,9 @@
     box-shadow: 5px 5px 10px var(--box-shadow-color);
     opacity: 0;
     transform: translateY(100px); /* Initial position off-screen */
-    animation: fadeIn 2.5s ease-out forwards; /* Animation duration and easing */
+    animation: fadeIn 1.5s ease-out forwards; /* Animation duration and easing */
     animation-timeline: view();
-    animation-range: entry 30% cover 55%;
+    animation-range: entry 20% cover 40%;
 
 
     .afbeelding{

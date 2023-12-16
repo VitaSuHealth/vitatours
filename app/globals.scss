@@ -3,7 +3,6 @@
 @import './_styles/Footer.scss';
 @import './_styles/Nav.scss';
 @import './_styles/RessortSlider.scss';
-@import './_styles/Beschrijving.scss';
 @import './_styles/ContactHeader.scss';
 @import './_styles/ContactLinks.scss';
 @import './_styles/FormSection.scss';
@@ -31,6 +30,7 @@
 @import './_styles/MiniLoader.scss';
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Irish+Grover&family=Lobster&family=Poppins:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Roboto+Flex:opsz,wght@8..144,300;8..144,400;8..144,500;8..144,600;8..144,700;8..144,800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600&display=swap');
 
 *{
   margin: 0;
@@ -43,6 +43,8 @@
     --second-font: 'Roboto Flex', sans-serif;
     // --header-font: 'Irish Grover', sans-serif;
     --header-font: 'Poppins', sans-serif;
+    --section-font: 'Oswald', sans-serif;
+
     --special-font: 'Lobster', sans-serif;
     
     --text-size-1: 48px;
@@ -58,8 +60,9 @@
 
     color-scheme: light dark;
 
-    --main-color: #5CA126;
-    --secund-color: #004c4c;
+    --main-color: #355E3B;
+    --secund-color: #5CA126;
+    --third-color: #014421;
     --suriname: linear-gradient( 
         to right, #169c59, #f1270c, 
         #ffe606); 
