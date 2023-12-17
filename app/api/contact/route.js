@@ -3,6 +3,7 @@ import {mailOptions, transporter} from "@/app/_lib/nodemailer"
 
 // To handle a POST request to /api/contact
 export async function POST(request) {
+  const data = await request.json();
   const textEmail = `
                       Hallo, er is een nieuw bericht binnengekomen via de website. \n
                       -------------------------------------------------------------\n
