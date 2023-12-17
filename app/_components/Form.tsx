@@ -61,6 +61,7 @@ function Form({subject}: {subject?: string}) {
       try {
         await formFunction(data).then((response: any) => {
           //Display succes toast and reset form
+          console.log(response)
           succesToast();
           contactForm.resetForm();
 
