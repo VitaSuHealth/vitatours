@@ -2,13 +2,13 @@ import {client} from "@/app/_lib/client"
 
 import ContactLinks from "./_components/ContactLinks";
 import Questions from "./_components/Questions";
-import Samenwerking from "./_components/Samenwerking";
 import ServicesPreview from "./_components/ServicesPreview";
 import RessortCards from "./_components/RessortCards";
 import RessortSlider from "./_components/RessortSlider";
 import SwiperComponent from "./_components/SwiperComponent";
 import ContentfulRessortObject from "./_types/ContentfulRessortObject";
 import type { Metadata } from 'next'
+import OverOnsIntro from "./_components/OverOnsIntro";
  
 export const metadata: Metadata = {
   title: 'Vita Tours - Home',
@@ -51,7 +51,7 @@ export default async function Home() {
         <RessortSlider>
           <SwiperComponent ressorten={ressorten}/>
         </RessortSlider>
-        <Samenwerking showHeader={true}/>
+        <OverOnsIntro/>
         <ServicesPreview/>
         <RessortCards/>
         <Questions q1={q1} q2={q2} q3={q3} q4={q4}/>

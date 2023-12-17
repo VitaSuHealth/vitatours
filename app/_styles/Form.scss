@@ -1,132 +1,115 @@
-    #form{
-        width: 100%;
-        min-width: 800px;
+#form{
+    width: 100%;
+    min-width: 800px;
 
-        label{
-            color: var(--off-white);
-            display: block;
-        }
-        .wrapper{
-            width: 80%;
-            margin: 0 auto;
-        }
-
-        .form-error{
-            font-size: var(--text-size-6);
-            color: red;
-        }
-
-        .contact-form{
-            width: 700px;
-            position: relative;
-            margin: 0 auto;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            .form-row{
-                display: flex;
-                flex-direction: row;
-                justify-content: center;
-                align-items: flex-start;
-                gap: 30px;
-
-                .name-form, .phone{
-                    flex: 1;
-                    
-                    input{
-                        width: 280px !important;
-                    }
-                }
-                .phone{
-                    justify-self: flex-end !important;
-                    
-                }
-
-            }
-        }
-    } 
-    form > *{
-        width: 600px;
-        min-height: 60px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: flex-start;
-        margin-bottom: 5px;
+    label{
+        color: var(--off-white);
+        display: block;
+    }
+    .wrapper{
+        width: 80%;
+        margin: 0 auto;
     }
 
-    input,
-    textarea{
-        width: 600px;
-        // min-width: 300px;
-        outline: 1px solid rgba($color: #a4a4a4, $alpha: 0.3);
-        border: none;
-        border-radius: 3px;
-        padding: 3px 10px;
-        color: var(--off-white);
-        background-color: var(--text-color);
-        font-family: var(--main-font);
+    .form-error{
         font-size: var(--text-size-6);
-    }
-    input{
-        height: 40px;
-    }
-    
-    textarea{
-        height: 150px;
-        min-height: 75px;
-    }
-    
-    label {
-        font-size: 20px;
-        color: var(--off-white);
-        margin-left: 5px;
-        margin-bottom: 5px;
-        opacity: 0.8;
-    }
-    
-    
-    .order-area{
-        position: absolute;
-        height: 0;
-        width: 0;
-    }
-    
-    .bevestigen{
-        width: 600px;
-        padding: 0 0 5px 0;
-        display: flex;
-        align-items: flex-start;
-        justify-content: center;
-        
-        input {
-            cursor: pointer;
-        }
-        
-        .btn-sumbit{
-            margin-top: 10px;
-            height: 45px;
-            padding: 5px;
-            background: var(--secund-color);
-            color: var(--off-white) !important;
-            font-size: var(--text-size-4-5) !important;
-        }
+        color: red;
     }
 
-    
-    .contact-banner{
-        flex: 2;
-        height: 100%;
-        min-height: 500px;
+    .contact-form{
+        width: 700px;
+        position: relative;
+        margin: 0 auto;
         display: flex;
         flex-direction: column;
+        justify-content: center;
         align-items: center;
-        justify-content:center;
-        color: var(--text-color);
-        text-align: center;
+        .form-row{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 30px;
 
-        .banner-text{
-            color: var(--main-color);
+            .name-form, .phone{
+                flex: 1;
+                
+                input{
+                    width: 280px !important;
+                }
+            }
+            .phone{
+                justify-self: flex-end !important;
+                
+            }
+
         }
     }
+} 
+form > *{
+    width: 600px;
+    min-height: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 5px;
+}
+
+input,
+textarea{
+    width: 600px;
+    // min-width: 300px;
+    outline: 1px solid rgba($color: #a4a4a4, $alpha: 0.3);
+    border: none;
+    border-radius: 3px;
+    padding: 3px 10px;
+    color: var(--off-white);
+    background-color: var(--text-color);
+    font-family: var(--main-font);
+    font-size: var(--text-size-6);
+}
+input{
+    height: 40px;
+}
+
+textarea{
+    height: 150px;
+    min-height: 75px;
+}
+
+label {
+    font-size: 20px;
+    color: var(--off-white);
+    margin-left: 5px;
+    margin-bottom: 5px;
+    opacity: 0.8;
+}
+
+
+.order-area{
+    position: absolute;
+    height: 0;
+    width: 0;
+}
+
+.bevestigen{
+    width: 600px;
+    padding: 0 0 5px 0;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    
+    input {
+        cursor: pointer;
+    }
+    
+    .btn-sumbit{
+        margin-top: 10px;
+        height: 45px;
+        padding: 5px;
+        background: var(--secund-color);
+        color: var(--off-white) !important;
+        font-size: var(--text-size-4-5) !important;
+    }
+}

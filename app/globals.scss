@@ -2,27 +2,17 @@
 @import './_styles/Form.scss';
 @import './_styles/Footer.scss';
 @import './_styles/Nav.scss';
-@import './_styles/RessortSlider.scss';
-@import './_styles/ContactHeader.scss';
+@import './_styles/Home-Ressort-Slider.scss';
+@import './_styles/Contact-OverOns-Header.scss';
 @import './_styles/ContactLinks.scss';
 @import './_styles/FormSection.scss';
-@import './_styles/Gallerij.scss';
-@import './_styles/HomeSlider.scss';
-@import './_styles/Locatie.scss';
-@import './_styles/OverOnsHeader.scss';
 @import './_styles/OverOnsIntro.scss';
 @import './_styles/Questions.scss';
 @import './_styles/RessortCards.scss';
 @import './_styles/RessortGridCard.scss';
-@import './_styles/RessortSlider.scss';
 @import './_styles/Samenwerking.scss';
 @import './_styles/Services.scss';
-@import './_styles/ServicesPreview.scss';
-@import './_styles/SocialLinks.scss';
 @import './_styles/Taggroup.scss';
-@import './_styles/TagSection.scss';
-@import './_styles/Socials.scss';
-@import './_styles/ServiceCard.scss';
 @import './_styles/RessortDetails.scss';
 @import './_styles/ImageModal.scss';
 @import './_styles/MediaQueries.scss';
@@ -189,6 +179,8 @@ p{
     z-index: 150;
 }
 
+
+//Containers
 .container {
     width: 90vw;
     max-width: 1500px;
@@ -214,6 +206,9 @@ p{
     left: 0;
     z-index: -5;
 }
+
+
+
 
 //Animations
 @keyframes fadeIn {
