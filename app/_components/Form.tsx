@@ -2,8 +2,7 @@
 import React, {useState } from 'react';
 import { useFormik } from 'formik';
 import * as Yup from "yup";
-import {SendContactForm} from "@/app/_lib/api"
-// import {mailOptions, transporter} from "@/app/_lib/nodemailer"
+import {SendContactForm, SendRessortForm} from "@/app/_lib/api"
 
 //Libraries
 import { FaAsterisk } from 'react-icons/fa'
@@ -11,7 +10,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import FormData from '../_types/FromData';
 import MiniLoader from './MiniLoader';
-
+ 
 
 
 function Form({subject}: {subject?: string}) {
@@ -20,9 +19,11 @@ function Form({subject}: {subject?: string}) {
   let naam:string = ''
   let telNummer:string = ''
   let email:string = ''
-  let onderwerp:string = ''
-  let bericht: string = ''
+  let onderwerp:string = subject ? `Trip naar: ${subject}` : ''
+  let bericht: string = '';
 
+
+  const formFunction = subject ? SendRessortForm : SendContactForm;
 
   //Formik Logic
   const contactForm = useFormik({
@@ -58,7 +59,7 @@ function Form({subject}: {subject?: string}) {
       }
 
       try {
-        await SendContactForm(data).then(() => {
+        await formFunction(data).then((response: any) => {
           //Display succes toast and reset form
           succesToast();
           contactForm.resetForm();

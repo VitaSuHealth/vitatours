@@ -9,7 +9,7 @@ const nextConfig = {
         CONTENTFUL_ENVIRONMENT: "master",
         NODEMAILER_EMAIL: "vitahealth.su@gmail.com",
         NODEMAILER_CCEMAIL: "",
-        NODEMAILER_PASS: "csdl okbe ixjh xcr"
+        NODEMAILER_PASS: "rpah tagt dfoq quji"
     }
 }
 
