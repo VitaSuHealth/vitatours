@@ -28,7 +28,7 @@ export default async function RessortCards() {
             }
         </div>
         <div className="cta">
-            <Link href={'/overons'} className="secund-btn">Alle Ressorten </Link>
+            <Link href={'/ressorten'} className="secund-btn">Alle Ressorten </Link>
         </div>
 
     </section>
