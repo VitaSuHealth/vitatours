@@ -50,9 +50,24 @@
     --main-color: #355E3B;
     --secund-color: #5CA126;
     --third-color: #014421;
-    --suriname: linear-gradient( 
-        to right, #169c59, #f1270c, 
-        #ffe606); 
+    --earth: linear-gradient(to right, #18e287, #115c8b, #0f309b);
+    /* --suriname: linear-gradient( 
+          to right, #093d23, #d4d4d4, 
+          #c61f09, #d8d216);  */
+  
+    --suriname: linear-gradient(to right,
+        #093d23 2%,
+        /* 0% */
+        #d4d4d4 40%,
+        /* 25% */
+        #c61f09 80%,
+        /* 50% */
+        #d8d216 90%
+        /* 100% */
+      );
+    // --suriname: linear-gradient( 
+    //     to right, #169c59, #f1270c, 
+    //     #ffe606); 
     --white: #ffffff;
     --off-white: #fffffff5;
     --card-bg: #f0f0f0;
@@ -161,8 +176,21 @@ p{
     font-size: var(--text-size-4-5);
     font-weight: 700;
     border-radius: 3px;
-
 }
+
+// .suriname {
+//     text-shadow: 5px 5px 12px var(--suriname);
+//     font-weight: 800;
+//     background: var(--suriname);
+//     -webkit-text-fill-color: transparent;
+//     -webkit-background-clip: text;
+// }
+  
+// .special-size {
+//     font-size: 3.5rem;
+// }
+
+
 .btn-3{
     color: var(--main-color);
     font-size: var(--text-size-4-5);
