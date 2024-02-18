@@ -27,7 +27,7 @@ export default function ImageModal({
           <div className="overlay dismiss" onClick={handleClick}>
             <GalleryImage image={clickedImg} key={clickedImg.fields.file.fileName}/>
 
-            <span className="dismiss" onClick={handleClick}>
+            <span className="dismiss cancel-btn" onClick={handleClick}>
               X
             </span>
             <div onClick={handelRotationLeft} className="overlay-arrows_left">

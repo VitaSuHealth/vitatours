@@ -58,11 +58,9 @@
     --suriname: linear-gradient(to right,
         #093d23 2%,
         /* 0% */
-        #d4d4d4 40%,
-        /* 25% */
-        #c61f09 80%,
+        #c61f09 60%,
         /* 50% */
-        #d8d216 90%
+        #d8d216 80%
         /* 100% */
       );
     // --suriname: linear-gradient( 
@@ -75,8 +73,9 @@
     --card-color: #ddd8d8;
     --tag-color: #d9d9d949;
     --grey: #ddd8d8;
-    --box-shadow-color: rgba(0,0,0,0.6);
-    --header-shadow-color: rgba(0,0,0,0.5);
+    --box-shadow-color: rgba(0,0,0,0.2);
+    --header-shadow-color: rgba(0,0,0,0.2);
+    --arrow-color: #5CA126;
 }
 html{
     scroll-behavior:smooth;
@@ -93,13 +92,15 @@ body{
         --main-color: #5CA126;
         --secund-color: #5CA126;
         --white: #ffffff;
+        --body-bg: #b9b9b9;
         --card-bg: #f0f0f0;
         --text-color: #000000;
         --gray: #ddd8d8;
         --off-white: #efefef;
         --card-color: #efefef;
-        --box-shadow-color: rgba(81, 131, 50, 0.5);
-        --header-shadow-color: rgba(0,0,0,0.5);
+        --box-shadow-color: rgba(81, 131, 50, 0.2);
+        --header-shadow-color: rgba(0,0,0,0.2);
+        --arrow-color: #5CA126;
     }
 
     body{
@@ -157,6 +158,8 @@ p{
     font-size: var(--text-size-5);
 }
 
+
+
 //Buttons
 .main-btn{
     color: var(--off-white);
@@ -178,13 +181,24 @@ p{
     border-radius: 3px;
 }
 
-// .suriname {
-//     text-shadow: 5px 5px 12px var(--suriname);
-//     font-weight: 800;
-//     background: var(--suriname);
-//     -webkit-text-fill-color: transparent;
-//     -webkit-background-clip: text;
-// }
+.suriname-2 {
+    text-shadow: 5px 5px 12px var(--suriname);
+    font-size: var(--text-size-3);
+    font-weight: bolder;
+    background: var(--suriname);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+.suriname{
+    font-size: 5rem;
+    font-family: var(--special-font);
+    text-shadow: 5px 5px 12px var(--suriname);
+    font-weight: 600;
+    background: var(--suriname);
+    -webkit-text-fill-color: transparent; 
+    -webkit-background-clip: text; 
+}
   
 // .special-size {
 //     font-size: 3.5rem;

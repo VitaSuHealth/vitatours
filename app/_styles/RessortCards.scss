@@ -28,7 +28,7 @@
     width: 310px;
     border: 1px solid rgba($color: #ccc, $alpha: 0.3);
     border-radius: 3px;
-    box-shadow: 5px 5px 10px var(--box-shadow-color);
+    box-shadow: 2px 2px 15px var(--box-shadow-color);
     opacity: 0;
     transform: translateY(100px); /* Initial position off-screen */
     animation: fadeIn 1.5s ease-out forwards; /* Animation duration and easing */
